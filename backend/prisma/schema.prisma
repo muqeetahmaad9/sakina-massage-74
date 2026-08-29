@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String    @id @default(cuid())
+  name              String
+  email             String    @unique
+  phone             String
+  countryDial       String    @default("+33")
+  passwordHash      String
+  birthDate         String?
+  resetToken        String?   @unique
+  resetTokenExpiry  DateTime?
+  createdAt         DateTime  @default(now())
+
+  bookings     Booking[]
+  consentForms ConsentForm[]
+  orders       Order[]
+}
+
+model Service {
+  id         String   @id @default(cuid())
+  category   String
+  name       String
+  duration   String
+  price      Float
+  createdAt  DateTime @default(now())
+
+  bookingServices BookingService[]
+}
+
+model Booking {
+  id            String   @id @default(cuid())
+  userId        String
+  date          String   // ISO date, e.g. "2026-09-10"
+  time          String   // e.g. "14:00"
+  status        String   @default("confirmed") // confirmed | cancelled
+  message       String?
+  invoiceNumber String   @unique
+  createdAt     DateTime @default(now())
+
+  user         User             @relation(fields: [userId], references: [id])
+  services     BookingService[]
+  consentForms ConsentForm[]
+
+  @@unique([date, time]) // one booking slot at a time (single practitioner)
+}
+
+// join table: a booking can include multiple services
+model BookingService {
+  id        String @id @default(cuid())
+  bookingId String
+  serviceId String
+
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  service Service @relation(fields: [serviceId], references: [id])
+}
+
+model Product {
+  id             String   @id @default(cuid())
+  name           String
+  price          Float
+  applicableServices String
+  appointments   Int
+  validity       String
+  createdAt      DateTime @default(now())
+
+  orderItems OrderItem[]
+}
+
+model Order {
+  id          String   @id @default(cuid())
+  userId      String
+  status      String   @default("paid") // paid | cancelled
+  invoiceNumber String @unique
+  totalPrice  Float
+  createdAt   DateTime @default(now())
+
+  user  User        @relation(fields: [userId], references: [id])
+  items OrderItem[]
+}
+
+model OrderItem {
+  id        String @id @default(cuid())
+  orderId   String
+  productId String
+  quantity  Int
+  unitPrice Float // snapshot of the price at time of purchase
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+}
+
+model ConsentForm {
+  id                 String   @id @default(cuid())
+  userId             String
+  bookingId          String?
+  firstName          String
+  lastName           String
+  birthDate          String
+  phone              String
+  expectations       String?
+  areasToTreat       String?
+  medicalConditions  String?
+  medications        String?
+  allergies          String?
+  pregnancy          String?
+  regularActivity    String?
+  hadProfessionalMassage String?
+  stressLevel        String?
+  signature          String?
+  createdAt          DateTime @default(now())
+
+  user    User     @relation(fields: [userId], references: [id])
+  booking Booking? @relation(fields: [bookingId], references: [id])
+}

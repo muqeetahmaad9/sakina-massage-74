@@ -1,0 +1,516 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "shop": "Shop",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "login": "Log in",
+    "logout": "Log out",
+    "book": "Book now",
+    "tagline": "Massage • Head Spa • Wellness"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Reconnect",
+        "line2": "with yourself"
+      },
+      "bookCta": "Book your treatment",
+      "discoverCta": "Discover our services",
+      "scroll": "Scroll"
+    },
+    "about": {
+      "eyebrow": "The Art of Wellness",
+      "title": {
+        "line1": "Take the time",
+        "line2": "to breathe."
+      },
+      "paragraph1": "I'm Anissah, a wellness massage practitioner certified by Magic Hands School. Sakina Massage 974 invites you into a space dedicated to deep relaxation and letting go. We believe that taking care of yourself isn't a luxury — it's a necessity.",
+      "paragraph2": "Discover our wellness massages and Head Spa treatments, designed to relieve everyday stress, relax your muscles and revive your energy in a peaceful setting in Saint-Paul.",
+      "learnMore": "Learn more"
+    },
+    "services": {
+      "eyebrow": "The Treatment Menu",
+      "title": "Our Signature Experiences",
+      "bookLink": "Book",
+      "viewAll": "See all our treatments",
+      "items": {
+        "headSpaPremium": {
+          "desc": "Precise work on cranial tension, circulation and the nervous system. Just the expertise of touch.",
+          "time": "1 hour"
+        },
+        "roseTherapie": {
+          "desc": "A relaxing massage with slow, enveloping movements, inspired by Eastern traditions for deep relaxation.",
+          "time": "1h30"
+        },
+        "deepTissueCupping": {
+          "desc": "A powerful treatment combining deep pressure and cupping to relieve muscle tension and boost circulation.",
+          "time": "1 hour"
+        }
+      }
+    },
+    "video": {
+      "title": "Your moment of absolute wellness",
+      "text": "Escape the everyday. Take a moment to breathe, relax and recharge in the expert hands of our practitioner.",
+      "cta": "Begin the experience"
+    },
+    "instagram": {
+      "title": "Follow our wellness journey",
+      "viewOn": "View on Instagram",
+      "followUs": "Follow us on Instagram"
+    }
+  },
+  "services": {
+    "pageTitle": "Our Services",
+    "pageSubtitle": "Discover the full range of our wellness treatments, designed and performed by Anissah for your deep relaxation.",
+    "categoryLabel": "Category",
+    "benefitsLabel": "Benefits",
+    "idealForLabel": "Ideal for",
+    "bookCta": "Book",
+    "items": {
+      "massageDuo": {
+        "intro": "The duo massage is a unique wellness experience to share with a loved one in a soft, warm and soothing atmosphere. Whether as a couple, mother and daughter, friends, cousins or close family, this special moment lets you relax together while enjoying a personalized, soothing treatment.",
+        "details": [
+          "Performed simultaneously in the same space, the duo massage combines fluid, enveloping and harmonious movements to release tension, reduce stress and provide a deep sense of relaxation for body and mind. Each massage is adapted to each person's needs and preferences to offer a cocooning and comforting experience.",
+          "A true parenthesis of gentleness and closeness, the duo massage invites you to let go, share and reconnect in an atmosphere conducive to calm, serenity and absolute wellness."
+        ],
+        "note": "Saturdays only"
+      },
+      "roseTherapieBodyTouch": {
+        "intro": "Let yourself be enveloped by a ritual inspired by Eastern traditions, designed to offer deep relaxation of body and mind.",
+        "details": [
+          "The Body Touch Oriental Massage is a relaxing massage with slow, fluid, enveloping movements. Performed with a delicately scented massage oil, it helps release muscle tension, ease stress and restore inner harmony."
+        ],
+        "benefits": [
+          "Releases muscle tension.",
+          "Provides a deep sense of relaxation.",
+          "Promotes better blood circulation.",
+          "Reduces stress and fatigue.",
+          "Soothes body and mind.",
+          "Offers a true moment of letting go."
+        ],
+        "note": "An ideal treatment for those who want to escape the everyday and enjoy a moment of serenity in a warm atmosphere with Eastern-inspired touches."
+      },
+      "massageDrainant": {
+        "intro": "The draining massage is a gentle, toning technique that stimulates lymphatic and blood circulation to help the body eliminate toxins and reduce water retention.",
+        "benefits": [
+          "Promotes the elimination of toxins",
+          "Reduces swelling and water retention",
+          "Refines and tones the silhouette",
+          "Relieves heavy legs",
+          "Boosts circulation",
+          "Provides a feeling of lightness and wellbeing"
+        ],
+        "idealFor": ["Bloating", "Fatigue and stress", "Water retention", "Loss of firmness", "Heavy-leg sensation"]
+      },
+      "headSpaPremium": {
+        "intro": "Our Head Spa is different… because it doesn't just relax: it's precise work on cranial tension, circulation, the nervous system. No gadgets here… no hair care. Just the expertise of touch. Just hands trained by real massage professionals.",
+        "benefits": ["Mental relaxation", "Tension release", "Deep stimulation", "A complete sensory experience"]
+      },
+      "headSpaMassageRelaxant": {
+        "intro": "Treat yourself to a complete wellness experience where scalp care meets body relaxation. This formula combines a Head Spa — a true scalp relaxation ritual — with a relaxing body massage to release physical tension and soothe the mind.",
+        "details": [
+          "The Head Spa includes a scalp massage with tailored treatments, promoting relaxation, stimulating microcirculation and creating a feeling of lightness. The relaxing massage, performed with slow, enveloping movements, helps release muscle tension, reduce stress and bring a deep sense of serenity."
+        ],
+        "benefits": [
+          "Deep relaxation of body and mind.",
+          "Relief of muscle tension.",
+          "Easing of stress and fatigue.",
+          "Stimulation of scalp circulation.",
+          "A feeling of lightness and revitalization."
+        ],
+        "note": "An ideal ritual to enjoy a true moment of gentleness and restore balance between body and mind."
+      },
+      "headSpaMassageRelaxantDuo": {
+        "intro": "Share a relaxing moment together with our Head Spa & Duo Relaxing Massage ritual, a wellness experience designed to recharge together.",
+        "details": [
+          "This treatment combines a Head Spa, which soothes the scalp and provides deep relaxation, with a relaxing body massage performed with gentle, enveloping movements to release tension and encourage true letting go."
+        ],
+        "benefits": [
+          "Deep relaxation of body and mind.",
+          "Relief of muscle tension.",
+          "Reduced stress and fatigue.",
+          "Stimulation of scalp microcirculation.",
+          "A feeling of wellbeing and lightness.",
+          "A special moment to share as a couple, with friends or family."
+        ],
+        "note": "Treat yourselves to a shared moment of gentleness and serenity, in a warm and soothing atmosphere."
+      },
+      "bonCadeauMassageRelaxant": {
+        "intro": "Give a genuine moment of relaxation with the relaxing massage gift voucher 🎁",
+        "details": [
+          "An ideal wellness gift to treat a loved one and let them enjoy a moment of deep relaxation. Through gentle, fluid and enveloping movements, the relaxing massage helps release tension, reduce stress and soothe both body and mind.",
+          "This gift voucher is perfect for any occasion: birthdays, celebrations, thank-yous, or simply to offer a moment of gentleness and escape. A thoughtful gift that invites letting go, serenity and total wellbeing."
+        ]
+      },
+      "deepTissueCupping": {
+        "intro": "The Deep Tissue massage combined with Cupping is a powerful, targeted treatment designed to relieve deep muscle tension, improve the body's recovery and restore a feeling of lightness and vitality.",
+        "details": [
+          "The Deep Tissue massage works deeply on muscles, fascia and chronic tension areas through slow, precise and sustained pressure. It helps release muscle knots, improve mobility and reduce pain linked to stress, physical exertion or poor posture.",
+          "Cupping, performed with suction cups, complements the treatment by stimulating blood and lymphatic circulation, promoting the elimination of toxins and helping deeply relax the muscle tissue. This technique provides an intense feeling of release and supports optimal recovery.",
+          "The combination of Deep Tissue and Cupping offers true rebalancing for the body, ideal for those prone to muscle tension, physical fatigue or accumulated stress. A deep treatment to regain flexibility, energy and lasting wellbeing."
+        ]
+      },
+      "footSpa": {
+        "intro": "Give your feet a true moment of escape.",
+        "details": [
+          "The Foot Spa is a complete wellness ritual that combines a relaxing foot bath, exfoliating and nourishing care, and a soothing massage to relax the feet and provide a deep feeling of lightness."
+        ],
+        "benefits": [
+          "Relieves tired feet and built-up tension.",
+          "Stimulates blood circulation.",
+          "Softens and hydrates the skin.",
+          "Provides a feeling of deep relaxation and overall wellbeing."
+        ],
+        "note": "Ideal after a long day on your feet, physical activity, or simply to treat yourself to a moment of relaxation, the Foot Spa restores comfort, softness and lightness to your feet while offering a true moment of letting go."
+      }
+    }
+  },
+  "shop": {
+    "pageTitle": "Shop",
+    "pageSubtitle": "Treat yourself to care packages designed to extend your wellbeing over time.",
+    "loading": "Loading packages...",
+    "flyer": {
+      "subtitle": "Drain · Detoxify · Lightness",
+      "benefit1": "Eliminates toxins and reduces water retention",
+      "benefit2": "Stimulates natural lymphatic circulation",
+      "benefit3": "Light legs, toned and relaxed body"
+    },
+    "applicableServices": "Services covered:",
+    "sessionsCount": "Number of sessions:",
+    "validity": "Validity:",
+    "added": "Added",
+    "addToCart": "Add to cart"
+  },
+  "cart": {
+    "pageTitle": "Your cart",
+    "pageSubtitle": "Check your packages before placing your order.",
+    "empty": {
+      "title": "Your cart is empty",
+      "text": "Discover our care packages in the shop.",
+      "cta": "View the shop"
+    },
+    "sessionsAndValidity": "{{count}} sessions · {{validity}}",
+    "decreaseQty": "Decrease quantity",
+    "increaseQty": "Increase quantity",
+    "removeItem": "Remove from cart",
+    "total": "Total",
+    "continueShopping": "Continue shopping",
+    "checkout": "Checkout"
+  },
+  "checkout": {
+    "emptyCart": {
+      "title": "Your cart is empty",
+      "text": "Add a package from the shop before placing your order.",
+      "cta": "View the shop"
+    },
+    "errors": {
+      "generic": "An error occurred. Please try again.",
+      "server": "Unable to reach the server."
+    },
+    "pageTitle": "Finalize your order",
+    "pageSubtitle": "One last step before your wellbeing.",
+    "confirmOrder": "Confirm order",
+    "loginToContinue": "Log in to continue",
+    "summary": "Summary",
+    "total": "Total",
+    "loginRequired": "You must be logged in to place an order. Your cart will be kept.",
+    "signup": "Sign up",
+    "orderInNameOf": "Order under the name of",
+    "processing": "Processing...",
+    "success": {
+      "thanks": "Thank you {{name}}!",
+      "text": "Your order has been recorded. An invoice has been sent to you by email.",
+      "bookCta": "Book a session",
+      "homeCta": "Back to home"
+    }
+  },
+  "booknow": {
+    "pageTitle": "Book your moment",
+    "pageSubtitle": "Let us take care of you.",
+    "steps": {
+      "services": "Services",
+      "date": "Date",
+      "time": "Time",
+      "details": "Details"
+    },
+    "continue": "Continue",
+    "total": "Total",
+    "signup": "Sign up",
+    "bookingInNameOf": "Booking under the name of",
+    "errors": {
+      "generic": "An error occurred. Please try again.",
+      "server": "Unable to reach the server. Please try again."
+    },
+    "step1": {
+      "heading": "Choose your treatments",
+      "subheading": "You can select several services.",
+      "loading": "Loading services...",
+      "noneSelected": "No treatment selected",
+      "selectedCount_one": "treatment selected",
+      "selectedCount_other": "treatments selected"
+    },
+    "step2": {
+      "heading": "Select the date",
+      "text": "Choose a date for your appointment."
+    },
+    "step3": {
+      "heading": "Available times",
+      "availabilityFor": "Availability for {{date}}",
+      "noSlots": "No slots available that day. Please choose another date."
+    },
+    "step4": {
+      "confirmHeading": "Confirm your booking",
+      "loginHeading": "Log in to continue",
+      "loginRequired": "You must be logged in to confirm a booking. Your selection will be kept.",
+      "messageLabel": "Message or specific need (Optional)",
+      "confirming": "Confirming...",
+      "confirmCta": "Confirm booking"
+    },
+    "step5": {
+      "title": "Your wellness moment is booked!",
+      "thanks": "Thank you {{name}}. Your booking has been recorded.",
+      "detailsTitle": "Your treatment details",
+      "dateLabel": "Date",
+      "timeLabel": "Time",
+      "consentCta": "Fill in my intake form (Required)",
+      "whatsappMessage": "Hello, I just booked {{services}} for {{date}} at {{time}}.",
+      "homeCta": "Back to home"
+    }
+  },
+  "contact": {
+    "pageTitle": "Contact & Access",
+    "pageSubtitle": "We're here to answer any questions about our treatments or help you plan your visit.",
+    "visitUs": "Come visit us",
+    "address": {
+      "label": "Address"
+    },
+    "phone": {
+      "label": "Phone & WhatsApp",
+      "whatsappCta": "Contact us on WhatsApp"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "hours": {
+      "label": "Opening hours",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "form": {
+      "title": "Send us a message",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Your phone number",
+      "messageLabel": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "sending": "Sending...",
+      "sent": "Message Sent ✓",
+      "sendCta": "Send message"
+    }
+  },
+  "consent": {
+    "errors": {
+      "generic": "An error occurred.",
+      "server": "Unable to reach the server."
+    },
+    "success": {
+      "title": "Form Sent",
+      "text": "Thank you for completing your intake form. This information will help us personalize your treatment safely.",
+      "homeCta": "Back to home"
+    },
+    "loginRequired": {
+      "title": "Login required",
+      "text": "You must be logged in to fill in your intake form."
+    },
+    "signup": "Sign up",
+    "practitionerTitle": "Wellness Massage Practitioner",
+    "intro": "To ensure you an optimal, tailored moment of relaxation, please complete this questionnaire before your session.",
+    "sections": {
+      "personalInfo": "Personal Information",
+      "massageGoals": "Massage Goals",
+      "healthStatus": "Health Status",
+      "habitsWellbeing": "Habits & Wellbeing",
+      "consent": "Consent"
+    },
+    "fields": {
+      "lastName": "Last name",
+      "firstName": "First name",
+      "birthDate": "Date of birth",
+      "phone": "Phone",
+      "expectations": "What do you expect from this session?",
+      "expectationsPlaceholder": "E.g.: Relaxation, pain relief...",
+      "areasToTreat": "Specific areas to focus on or avoid:",
+      "areasToTreatPlaceholder": "E.g.: Focus on the back, avoid the head...",
+      "medicalConditions": "Do you have any medical conditions?",
+      "medications": "Are you currently taking any medication?",
+      "allergies": "Do you have any allergies?",
+      "pregnancy": "Are you pregnant or have you recently given birth?",
+      "regularActivity": "Do you practice regular physical activity?",
+      "hadProfessionalMassage": "Have you ever had a professional massage?",
+      "stressLevel": "Do you frequently feel stress or anxiety?",
+      "signature": "Signature (Enter your full name):",
+      "signaturePlaceholder": "Electronic signature"
+    },
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "sometimes": "Sometimes"
+    },
+    "attestation": "I confirm that the information provided is accurate and I accept the massage under my own responsibility. I understand that this treatment is a wellness and relaxation massage, not therapeutic and not medical.",
+    "sending": "Sending...",
+    "submitCta": "Submit my form"
+  },
+  "gallery": {
+    "close": "Close",
+    "alt": {
+      "nails1": "Pink nail art with a gold ring",
+      "nails2": "Leopard and black nail art",
+      "nails3": "Colorful polka-dot nail art",
+      "nails4": "Creative nail art",
+      "headSpa1": "Scalp treatment at the wash basin",
+      "headSpa2": "Scalp massage during the Head Spa",
+      "headSpa3": "Hair rinse, Head Spa ritual",
+      "wellness1": "Candles and pebbles, zen atmosphere",
+      "wellness2": "Hot stones on the back",
+      "wellness3": "Scented candles in a jar",
+      "wellness4": "Candles and pebbles on wood",
+      "anissah1": "Applying massage oil",
+      "anissah2": "Relaxing Oriental massage",
+      "anissah3": "Foot reflexology",
+      "anissah4": "Leg massage"
+    }
+  },
+  "login": {
+    "title": "Log in",
+    "subtitle": "Access your account to manage your bookings.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submitting": "Logging in...",
+    "submitCta": "Log in",
+    "noAccount": "Don't have an account yet?",
+    "signupLink": "Sign up",
+    "forgotPassword": "Forgot your password?",
+    "errors": {
+      "generic": "Login failed."
+    }
+  },
+  "signup": {
+    "title": "Sign up",
+    "subtitle": "Create your account to book your treatments.",
+    "fullNameLabel": "Full name",
+    "emailLabel": "Email",
+    "phoneLabel": "Mobile phone",
+    "passwordLabel": "Password",
+    "passwordHint": "(minimum 6 characters)",
+    "confirmPasswordLabel": "Confirm password",
+    "birthDateLabel": "Date of birth",
+    "agreePrefix": "I have read and accept the",
+    "privacyPolicy": "privacy policy",
+    "agreeAnd": "and the",
+    "terms": "terms and conditions",
+    "submitting": "Creating account...",
+    "submitCta": "Sign up",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Log in",
+    "errors": {
+      "passwordTooShort": "Password must be at least 6 characters long.",
+      "passwordMismatch": "Passwords do not match.",
+      "mustAgree": "Please accept the terms to continue.",
+      "generic": "Sign up failed."
+    },
+    "success": {
+      "title": "Account created!",
+      "text": "You are now logged in. Redirecting..."
+    }
+  },
+  "forgotPassword": {
+    "title": "Forgot password",
+    "subtitle": "Enter your email and we'll send you a link to reset your password.",
+    "emailLabel": "Email",
+    "sending": "Sending...",
+    "submitCta": "Send link",
+    "backToLogin": "Back to login",
+    "sent": {
+      "title": "Email sent",
+      "text": "If an account exists with this address, a reset link has just been sent to you. Check your inbox (and spam folder)."
+    },
+    "errors": {
+      "generic": "An error occurred.",
+      "server": "Unable to reach the server."
+    }
+  },
+  "resetPassword": {
+    "invalidLink": {
+      "title": "Invalid link",
+      "text": "This reset link is incomplete or invalid.",
+      "cta": "Request a new link"
+    },
+    "errors": {
+      "tooShort": "Password must be at least 6 characters long.",
+      "mismatch": "Passwords do not match.",
+      "generic": "An error occurred.",
+      "server": "Unable to reach the server."
+    },
+    "title": "New password",
+    "subtitle": "Choose a new password for your account.",
+    "newPasswordLabel": "New password",
+    "passwordHint": "(minimum 6 characters)",
+    "confirmLabel": "Confirmation",
+    "submitting": "Updating...",
+    "submitCta": "Reset password",
+    "success": {
+      "title": "Password updated",
+      "text": "Redirecting to login..."
+    }
+  },
+  "footer": {
+    "brandText": "Your wellness and relaxation space in Saint-Paul. Discover our massages and Head Spa treatments for absolute relaxation.",
+    "navigation": "Navigation",
+    "consentForm": "Intake Form",
+    "hoursTitle": "Opening Hours",
+    "hours": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "copyright": "© {{year}} Sakina Massage 974. All rights reserved.",
+    "legalNotice": "Legal Notice",
+    "terms": "Terms of Sale"
+  },
+  "authLayout": {
+    "title": {
+      "line1": "Take the time",
+      "line2": "to breathe."
+    }
+  },
+  "phoneInput": {
+    "searchPlaceholder": "Search for a country...",
+    "noResults": "No country found"
+  },
+  "packageFlyer": {
+    "tagline": "Wellbeing · Relaxation · Harmony",
+    "sessions": "{{count}} SESSIONS",
+    "footerText": "Give your body the lightness it deserves."
+  },
+  "locationMap": {
+    "ariaLabel": "View directions to Sakina Massage 974 on Google Maps",
+    "viewDirections": "View directions"
+  },
+  "whatsapp": {
+    "message": "Hello, I'd like more information about your treatments.",
+    "needHelp": "Need help?"
+  }
+}

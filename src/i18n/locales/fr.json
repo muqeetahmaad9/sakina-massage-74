@@ -1,0 +1,516 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Prestations",
+    "shop": "Boutique",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "book": "Réserver",
+    "tagline": "Massage • Head Spa • Wellness"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Reconnectez-vous",
+        "line2": "à vous-même"
+      },
+      "bookCta": "Réserver votre soin",
+      "discoverCta": "Découvrir nos services",
+      "scroll": "Scroll"
+    },
+    "about": {
+      "eyebrow": "L'Art du Bien-Être",
+      "title": {
+        "line1": "Prenez le temps",
+        "line2": "de souffler."
+      },
+      "paragraph1": "Je suis Anissah, praticienne de massages bien-être certifiée de Magic Hands School. Sakina Massage 974 vous invite dans un espace dédié à la relaxation profonde et au lâcher-prise. Nous croyons que prendre soin de soi n'est pas un luxe, mais une nécessité.",
+      "paragraph2": "Découvrez nos massages bien-être et nos soins Head Spa conçus pour soulager le stress quotidien, détendre vos muscles et raviver votre énergie dans un environnement paisible à Saint-Paul.",
+      "learnMore": "En savoir plus"
+    },
+    "services": {
+      "eyebrow": "La Carte des Soins",
+      "title": "Nos Expériences Signature",
+      "bookLink": "Réserver",
+      "viewAll": "Voir tous nos soins",
+      "items": {
+        "headSpaPremium": {
+          "desc": "Un travail précis sur les tensions crâniennes, la circulation et le système nerveux. Uniquement l'expertise du toucher.",
+          "time": "1 heure"
+        },
+        "roseTherapie": {
+          "desc": "Massage relaxant aux mouvements lents et enveloppants, inspiré des traditions orientales pour une détente profonde.",
+          "time": "1h30"
+        },
+        "deepTissueCupping": {
+          "desc": "Un soin puissant associant pressions profondes et cupping pour soulager les tensions musculaires et relancer la circulation.",
+          "time": "1 heure"
+        }
+      }
+    },
+    "video": {
+      "title": "Votre moment de bien-être absolu",
+      "text": "Échappez au quotidien. Prenez un instant pour respirer, vous détendre et vous ressourcer entre les mains expertes de notre praticienne.",
+      "cta": "Commencer l'expérience"
+    },
+    "instagram": {
+      "title": "Suivez notre voyage bien-être",
+      "viewOn": "Voir sur Instagram",
+      "followUs": "Nous suivre sur Instagram"
+    }
+  },
+  "services": {
+    "pageTitle": "Nos Prestations",
+    "pageSubtitle": "Découvrez l'ensemble de nos soins bien-être, pensés et réalisés par Anissah pour votre relaxation profonde.",
+    "categoryLabel": "Catégorie",
+    "benefitsLabel": "Les bienfaits",
+    "idealForLabel": "Idéal pour",
+    "bookCta": "Réserver",
+    "items": {
+      "massageDuo": {
+        "intro": "Le massage en duo est une expérience de bien-être unique à partager avec une personne chère dans une atmosphère douce, chaleureuse et apaisante. Que ce soit en couple, entre mère et fille, amies, cousines ou proches, ce moment privilégié permet de se détendre ensemble tout en profitant d'un soin relaxant personnalisé.",
+        "details": [
+          "Réalisé simultanément dans le même espace, le massage duo associe des gestes fluides, enveloppants et harmonieux pour relâcher les tensions, réduire le stress et procurer une profonde sensation de détente du corps et de l'esprit. Chaque massage est adapté aux besoins et préférences de chacun afin d'offrir une expérience cocooning et réconfortante.",
+          "Véritable parenthèse de douceur et de complicité, le massage en duo invite au lâcher-prise, au partage et à la reconnexion dans une ambiance propice au calme, à la sérénité et au bien-être absolu."
+        ],
+        "note": "Uniquement le samedi"
+      },
+      "roseTherapieBodyTouch": {
+        "intro": "Laissez-vous envelopper par un rituel inspiré des traditions orientales, conçu pour offrir une profonde détente du corps et de l'esprit.",
+        "details": [
+          "Le Massage Body Touch Oriental est un massage relaxant aux mouvements lents, fluides et enveloppants. Réalisé avec une huile de massage délicatement parfumée, il aide à relâcher les tensions musculaires, apaiser le stress et rétablir l'harmonie intérieure."
+        ],
+        "benefits": [
+          "Relâche les tensions musculaires.",
+          "Procure une profonde sensation de détente.",
+          "Favorise une meilleure circulation sanguine.",
+          "Réduit le stress et la fatigue.",
+          "Apaise le corps et l'esprit.",
+          "Offre un véritable moment de lâcher-prise."
+        ],
+        "note": "Un soin idéal pour celles et ceux qui souhaitent s'évader du quotidien et s'accorder une parenthèse de sérénité dans une ambiance chaleureuse aux inspirations orientales."
+      },
+      "massageDrainant": {
+        "intro": "Le massage drainant est une technique douce et tonique qui stimule la circulation lymphatique et sanguine afin d'aider le corps à éliminer les toxines et réduire la rétention d'eau.",
+        "benefits": [
+          "Favorise l'élimination des toxines",
+          "Réduit les gonflements et la rétention d'eau",
+          "Affine et tonifie la silhouette",
+          "Soulage les jambes lourdes",
+          "Active la circulation",
+          "Procure une sensation de légèreté et de bien-être"
+        ],
+        "idealFor": ["Ballonnements", "Fatigue et stress", "Rétention d'eau", "Perte de tonicité", "Sensation de jambes lourdes"]
+      },
+      "headSpaPremium": {
+        "intro": "Notre Head Spa est différent… parce qu'il ne se contente pas de détendre : un travail précis sur les tensions crâniennes, la circulation, le système nerveux. Ici pas de gadgets… pas de soins capillaires. Uniquement l'expertise du toucher. Uniquement des mains formées par de vrais professionnels de massage.",
+        "benefits": ["Détente mentale", "Libérations des tensions", "Stimulation profonde", "Expérience sensorielle complète"]
+      },
+      "headSpaMassageRelaxant": {
+        "intro": "Offrez-vous une expérience de bien-être complète où le soin du cuir chevelu rencontre la détente du corps. Cette formule associe un Head Spa, véritable rituel de relaxation du cuir chevelu, à un massage relaxant du corps pour relâcher les tensions physiques et apaiser l'esprit.",
+        "details": [
+          "Le Head Spa comprend un massage du cuir chevelu accompagné de soins adaptés, favorisant la détente, la stimulation de la microcirculation et une sensation de légèreté. Le massage relaxant, réalisé avec des gestes lents et enveloppants, aide à dénouer les tensions musculaires, réduire le stress et procurer un profond sentiment de sérénité."
+        ],
+        "benefits": [
+          "Détente profonde du corps et de l'esprit.",
+          "Soulagement des tensions musculaires.",
+          "Apaisement du stress et de la fatigue.",
+          "Stimulation de la circulation au niveau du cuir chevelu.",
+          "Sensation de légèreté et de revitalisation."
+        ],
+        "note": "Un rituel idéal pour s'offrir une véritable parenthèse de douceur et retrouver un équilibre entre le corps et l'esprit."
+      },
+      "headSpaMassageRelaxantDuo": {
+        "intro": "Partagez un moment de détente à deux avec notre rituel Head Spa & Massage Relaxant en Duo, une expérience bien-être pensée pour se ressourcer ensemble.",
+        "details": [
+          "Cette prestation associe un Head Spa, qui apaise le cuir chevelu et procure une profonde relaxation, à un massage relaxant du corps réalisé avec des gestes doux et enveloppants pour relâcher les tensions et favoriser un véritable lâcher-prise."
+        ],
+        "benefits": [
+          "Profonde relaxation du corps et de l'esprit.",
+          "Soulagement des tensions musculaires.",
+          "Diminution du stress et de la fatigue.",
+          "Stimulation de la microcirculation du cuir chevelu.",
+          "Sensation de bien-être et de légèreté.",
+          "Un moment privilégié à partager en couple, entre amis ou en famille."
+        ],
+        "note": "Offrez-vous une parenthèse de douceur et de sérénité à deux, dans une ambiance chaleureuse et apaisante."
+      },
+      "bonCadeauMassageRelaxant": {
+        "intro": "Offrez un véritable moment de détente avec le bon cadeau massage relaxant 🎁",
+        "details": [
+          "Une parenthèse de bien-être idéale pour faire plaisir à une personne chère et lui permettre de profiter d'un instant de relaxation profonde. Grâce à des gestes doux, fluides et enveloppants, le massage relaxant aide à relâcher les tensions, diminuer le stress et apaiser le corps comme l'esprit.",
+          "Ce bon cadeau est parfait pour toutes les occasions : anniversaire, fête, remerciement ou simplement pour offrir un moment de douceur et d'évasion. Une attention délicate qui invite au lâcher-prise, à la sérénité et au bien-être total."
+        ]
+      },
+      "deepTissueCupping": {
+        "intro": "Le massage Deep Tissue associé au Cupping est un soin puissant et ciblé conçu pour soulager les tensions musculaires profondes, améliorer la récupération du corps et rétablir une sensation de légèreté et de vitalité.",
+        "details": [
+          "Le massage Deep Tissue agit en profondeur sur les muscles, les fascias et les zones de tension chronique grâce à des pressions lentes, précises et soutenues. Il aide à relâcher les nœuds musculaires, améliorer la mobilité et réduire les douleurs liées au stress, aux efforts physiques ou aux mauvaises postures.",
+          "Le Cupping, réalisé à l'aide de ventouses, vient compléter le soin en stimulant la circulation sanguine et lymphatique, favorisant l'élimination des toxines et aidant à détendre les tissus musculaires en profondeur. Cette technique procure une sensation de décontraction intense et favorise une récupération optimale.",
+          "L'association du Deep Tissue et du Cupping offre un véritable rééquilibrage du corps, idéal pour les personnes sujettes aux tensions musculaires, à la fatigue physique ou au stress accumulé. Un soin profond pour retrouver souplesse, énergie et bien-être durable."
+        ]
+      },
+      "footSpa": {
+        "intro": "Offrez à vos pieds un véritable moment d'évasion.",
+        "details": [
+          "Le Foot Spa est un rituel de bien-être complet qui associe un bain relaxant des pieds, des soins exfoliants et nourrissants, ainsi qu'un massage apaisant pour délasser les pieds et favoriser une profonde sensation de légèreté."
+        ],
+        "benefits": [
+          "Soulager les pieds fatigués et les tensions accumulées.",
+          "Stimuler la circulation sanguine.",
+          "Adoucir et hydrater la peau.",
+          "Procurer une sensation de détente profonde et de bien-être général."
+        ],
+        "note": "Idéal après une longue journée debout, une activité physique ou simplement pour s'accorder une parenthèse de relaxation, le Foot Spa redonne confort, douceur et légèreté à vos pieds tout en offrant un véritable moment de lâcher-prise."
+      }
+    }
+  },
+  "shop": {
+    "pageTitle": "Boutique",
+    "pageSubtitle": "Offrez-vous des forfaits de soins pensés pour prolonger votre bien-être dans le temps.",
+    "loading": "Chargement des forfaits...",
+    "flyer": {
+      "subtitle": "Drainer · Détoxifier · Légèreté",
+      "benefit1": "Élimine les toxines et réduit la rétention d'eau",
+      "benefit2": "Stimule la circulation lymphatique naturelle",
+      "benefit3": "Jambes légères, corps tonifié et détendu"
+    },
+    "applicableServices": "Prestations concernées :",
+    "sessionsCount": "Nombre de séances :",
+    "validity": "Validité :",
+    "added": "Ajouté",
+    "addToCart": "Ajouter au panier"
+  },
+  "cart": {
+    "pageTitle": "Votre panier",
+    "pageSubtitle": "Vérifiez vos forfaits avant de passer commande.",
+    "empty": {
+      "title": "Votre panier est vide",
+      "text": "Découvrez nos forfaits de soins dans la boutique.",
+      "cta": "Voir la boutique"
+    },
+    "sessionsAndValidity": "{{count}} séances · {{validity}}",
+    "decreaseQty": "Diminuer la quantité",
+    "increaseQty": "Augmenter la quantité",
+    "removeItem": "Retirer du panier",
+    "total": "Total",
+    "continueShopping": "Continuer mes achats",
+    "checkout": "Passer commande"
+  },
+  "checkout": {
+    "emptyCart": {
+      "title": "Votre panier est vide",
+      "text": "Ajoutez un forfait depuis la boutique avant de passer commande.",
+      "cta": "Voir la boutique"
+    },
+    "errors": {
+      "generic": "Une erreur est survenue. Merci de réessayer.",
+      "server": "Impossible de contacter le serveur."
+    },
+    "pageTitle": "Finaliser la commande",
+    "pageSubtitle": "Un dernier pas avant votre bien-être.",
+    "confirmOrder": "Confirmer la commande",
+    "loginToContinue": "Connectez-vous pour continuer",
+    "summary": "Récapitulatif",
+    "total": "Total",
+    "loginRequired": "Vous devez être connecté(e) pour passer commande. Votre panier sera conservé.",
+    "signup": "S'inscrire",
+    "orderInNameOf": "Commande au nom de",
+    "processing": "Traitement en cours...",
+    "success": {
+      "thanks": "Merci {{name}} !",
+      "text": "Votre commande a bien été enregistrée. Une facture vous a été envoyée par email.",
+      "bookCta": "Réserver une séance",
+      "homeCta": "Retour Accueil"
+    }
+  },
+  "booknow": {
+    "pageTitle": "Réservez votre moment",
+    "pageSubtitle": "Laissez-nous prendre soin de vous.",
+    "steps": {
+      "services": "Soins",
+      "date": "Date",
+      "time": "Heure",
+      "details": "Détails"
+    },
+    "continue": "Continuer",
+    "total": "Total",
+    "signup": "S'inscrire",
+    "bookingInNameOf": "Réservation au nom de",
+    "errors": {
+      "generic": "Une erreur est survenue. Merci de réessayer.",
+      "server": "Impossible de contacter le serveur. Merci de réessayer."
+    },
+    "step1": {
+      "heading": "Choisissez vos soins",
+      "subheading": "Vous pouvez sélectionner plusieurs prestations.",
+      "loading": "Chargement des prestations...",
+      "noneSelected": "Aucun soin sélectionné",
+      "selectedCount_one": "soin sélectionné",
+      "selectedCount_other": "soins sélectionnés"
+    },
+    "step2": {
+      "heading": "Sélectionnez la date",
+      "text": "Choisissez une date pour votre rendez-vous."
+    },
+    "step3": {
+      "heading": "Heures disponibles",
+      "availabilityFor": "Disponibilités pour le {{date}}",
+      "noSlots": "Aucun créneau disponible ce jour-là. Merci de choisir une autre date."
+    },
+    "step4": {
+      "confirmHeading": "Confirmer votre réservation",
+      "loginHeading": "Connectez-vous pour continuer",
+      "loginRequired": "Vous devez être connecté(e) pour confirmer une réservation. Votre sélection sera conservée.",
+      "messageLabel": "Message ou besoin spécifique (Optionnel)",
+      "confirming": "Confirmation en cours...",
+      "confirmCta": "Confirmer la réservation"
+    },
+    "step5": {
+      "title": "Votre moment bien-être est réservé !",
+      "thanks": "Merci {{name}}. Votre réservation a bien été enregistrée.",
+      "detailsTitle": "Détails de votre soin",
+      "dateLabel": "Date",
+      "timeLabel": "Heure",
+      "consentCta": "Remplir ma fiche (Obligatoire)",
+      "whatsappMessage": "Bonjour, je viens de réserver {{services}} pour le {{date}} à {{time}}.",
+      "homeCta": "Retour Accueil"
+    }
+  },
+  "contact": {
+    "pageTitle": "Contact & Accès",
+    "pageSubtitle": "Nous sommes à votre écoute pour toute question concernant nos soins ou pour vous aider à planifier votre venue.",
+    "visitUs": "Rendez-nous visite",
+    "address": {
+      "label": "Adresse"
+    },
+    "phone": {
+      "label": "Téléphone & WhatsApp",
+      "whatsappCta": "Nous contacter sur WhatsApp"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "hours": {
+      "label": "Horaires d'ouverture",
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "nameLabel": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone",
+      "phonePlaceholder": "Votre numéro",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+      "sending": "Envoi en cours...",
+      "sent": "Message Envoyé ✓",
+      "sendCta": "Envoyer le message"
+    }
+  },
+  "consent": {
+    "errors": {
+      "generic": "Une erreur est survenue.",
+      "server": "Impossible de contacter le serveur."
+    },
+    "success": {
+      "title": "Formulaire Envoyé",
+      "text": "Merci d'avoir complété votre fiche de renseignements. Ces informations nous permettront de personnaliser votre soin en toute sécurité.",
+      "homeCta": "Retour à l'accueil"
+    },
+    "loginRequired": {
+      "title": "Connexion requise",
+      "text": "Vous devez être connecté(e) pour remplir votre fiche de renseignements."
+    },
+    "signup": "S'inscrire",
+    "practitionerTitle": "Praticienne en Massage Bien-Être",
+    "intro": "Afin de vous garantir un moment de détente optimal et adapté à vos besoins, merci de remplir ce questionnaire avant votre séance.",
+    "sections": {
+      "personalInfo": "Informations Personnelles",
+      "massageGoals": "Objectifs du Massage",
+      "healthStatus": "État de Santé",
+      "habitsWellbeing": "Habitudes & Bien-Être",
+      "consent": "Consentement"
+    },
+    "fields": {
+      "lastName": "Nom",
+      "firstName": "Prénom",
+      "birthDate": "Date de naissance",
+      "phone": "Téléphone",
+      "expectations": "Qu'attendez-vous de cette séance ?",
+      "expectationsPlaceholder": "Ex: Relaxation, soulager des douleurs...",
+      "areasToTreat": "Zones spécifiques à traiter ou à éviter :",
+      "areasToTreatPlaceholder": "Ex: Insister sur le dos, éviter la tête...",
+      "medicalConditions": "Avez-vous des problèmes médicaux ?",
+      "medications": "Prenez-vous des médicaments actuellement ?",
+      "allergies": "Avez-vous des allergies ?",
+      "pregnancy": "Êtes-vous enceinte ou avez-vous récemment accouché ?",
+      "regularActivity": "Pratiquez-vous une activité physique régulière ?",
+      "hadProfessionalMassage": "Avez-vous déjà reçu un massage professionnel ?",
+      "stressLevel": "Ressentez-vous fréquemment du stress ou de l'anxiété ?",
+      "signature": "Signature (Entrez votre nom complet) :",
+      "signaturePlaceholder": "Signature électronique"
+    },
+    "options": {
+      "yes": "Oui",
+      "no": "Non",
+      "sometimes": "Par période"
+    },
+    "attestation": "J'atteste que les informations fournies sont exactes et j'accepte le massage sous ma propre responsabilité. Je comprends que ce soin est un massage de bien-être et de relaxation, non thérapeutique et non médicalisé.",
+    "sending": "Envoi en cours...",
+    "submitCta": "Envoyer ma fiche"
+  },
+  "gallery": {
+    "close": "Fermer",
+    "alt": {
+      "nails1": "Nail art rose et bague dorée",
+      "nails2": "Nail art léopard et noir",
+      "nails3": "Nail art à pois colorés",
+      "nails4": "Nail art créatif",
+      "headSpa1": "Soin du cuir chevelu au bac de lavage",
+      "headSpa2": "Massage crânien pendant le Head Spa",
+      "headSpa3": "Rinçage des cheveux, rituel Head Spa",
+      "wellness1": "Bougies et galets, ambiance zen",
+      "wellness2": "Pierres chaudes sur le dos",
+      "wellness3": "Bougies parfumées en jarre",
+      "wellness4": "Bougies et galets sur bois",
+      "anissah1": "Application d'huile de massage",
+      "anissah2": "Massage relaxant oriental",
+      "anissah3": "Réflexologie plantaire",
+      "anissah4": "Massage des jambes"
+    }
+  },
+  "login": {
+    "title": "Connexion",
+    "subtitle": "Accédez à votre espace pour gérer vos réservations.",
+    "emailLabel": "Email",
+    "passwordLabel": "Mot de passe",
+    "submitting": "Connexion en cours...",
+    "submitCta": "Se connecter",
+    "noAccount": "Pas encore de compte ?",
+    "signupLink": "S'inscrire",
+    "forgotPassword": "Mot de passe oublié ?",
+    "errors": {
+      "generic": "Échec de la connexion."
+    }
+  },
+  "signup": {
+    "title": "Inscription",
+    "subtitle": "Créez votre compte pour réserver vos soins.",
+    "fullNameLabel": "Nom complet",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone mobile",
+    "passwordLabel": "Mot de passe",
+    "passwordHint": "(6 caractères minimum)",
+    "confirmPasswordLabel": "Confirmation du mot de passe",
+    "birthDateLabel": "Date de naissance",
+    "agreePrefix": "J'ai lu et j'accepte la",
+    "privacyPolicy": "politique de confidentialité",
+    "agreeAnd": "et les",
+    "terms": "conditions générales",
+    "submitting": "Création en cours...",
+    "submitCta": "S'inscrire",
+    "hasAccount": "Déjà un compte ?",
+    "loginLink": "Se connecter",
+    "errors": {
+      "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères.",
+      "passwordMismatch": "Les mots de passe ne correspondent pas.",
+      "mustAgree": "Veuillez accepter les conditions pour continuer.",
+      "generic": "Échec de l'inscription."
+    },
+    "success": {
+      "title": "Compte créé !",
+      "text": "Vous êtes maintenant connecté. Redirection..."
+    }
+  },
+  "forgotPassword": {
+    "title": "Mot de passe oublié",
+    "subtitle": "Entrez votre email et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "emailLabel": "Email",
+    "sending": "Envoi en cours...",
+    "submitCta": "Envoyer le lien",
+    "backToLogin": "Retour à la connexion",
+    "sent": {
+      "title": "Email envoyé",
+      "text": "Si un compte existe avec cette adresse, un lien de réinitialisation vient de vous être envoyé. Vérifiez votre boîte de réception (et vos spams)."
+    },
+    "errors": {
+      "generic": "Une erreur est survenue.",
+      "server": "Impossible de contacter le serveur."
+    }
+  },
+  "resetPassword": {
+    "invalidLink": {
+      "title": "Lien invalide",
+      "text": "Ce lien de réinitialisation est incomplet ou invalide.",
+      "cta": "Demander un nouveau lien"
+    },
+    "errors": {
+      "tooShort": "Le mot de passe doit contenir au moins 6 caractères.",
+      "mismatch": "Les mots de passe ne correspondent pas.",
+      "generic": "Une erreur est survenue.",
+      "server": "Impossible de contacter le serveur."
+    },
+    "title": "Nouveau mot de passe",
+    "subtitle": "Choisissez un nouveau mot de passe pour votre compte.",
+    "newPasswordLabel": "Nouveau mot de passe",
+    "passwordHint": "(6 caractères minimum)",
+    "confirmLabel": "Confirmation",
+    "submitting": "Mise à jour en cours...",
+    "submitCta": "Réinitialiser le mot de passe",
+    "success": {
+      "title": "Mot de passe mis à jour",
+      "text": "Redirection vers la connexion..."
+    }
+  },
+  "footer": {
+    "brandText": "Votre espace de bien-être et de relaxation à Saint-Paul. Découvrez nos massages et soins Head Spa pour une détente absolue.",
+    "navigation": "Navigation",
+    "consentForm": "Fiche de Renseignements",
+    "hoursTitle": "Horaires",
+    "hours": {
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "copyright": "© {{year}} Sakina Massage 974. Tous droits réservés.",
+    "legalNotice": "Mentions Légales",
+    "terms": "CGV"
+  },
+  "authLayout": {
+    "title": {
+      "line1": "Prenez le temps",
+      "line2": "de souffler."
+    }
+  },
+  "phoneInput": {
+    "searchPlaceholder": "Rechercher un pays...",
+    "noResults": "Aucun pays trouvé"
+  },
+  "packageFlyer": {
+    "tagline": "Bien-être · Détente · Harmonie",
+    "sessions": "{{count}} SÉANCES",
+    "footerText": "Offrez à votre corps la légèreté qu'il mérite."
+  },
+  "locationMap": {
+    "ariaLabel": "Voir l'itinéraire vers Sakina Massage 974 sur Google Maps",
+    "viewDirections": "Voir l'itinéraire"
+  },
+  "whatsapp": {
+    "message": "Bonjour, je souhaite avoir plus d'informations sur vos soins.",
+    "needHelp": "Besoin d'aide ?"
+  }
+}
