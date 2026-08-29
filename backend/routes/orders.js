@@ -82,7 +82,7 @@ router.post('/', requireAuth, async (req, res) => {
   }
 
   const { user: orderUser, ...orderWithoutUser } = order;
-  const { passwordHash: _unused, ...safeUser } = orderUser;
+  const { passwordHash: _pw, resetToken: _rt, resetTokenExpiry: _rte, ...safeUser } = orderUser;
   res.status(201).json({ success: true, order: { ...orderWithoutUser, user: safeUser } });
 });
 

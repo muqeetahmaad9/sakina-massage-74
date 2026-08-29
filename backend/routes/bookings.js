@@ -93,7 +93,7 @@ router.post('/', requireAuth, async (req, res) => {
   }
 
   const { user: bookingUser, ...bookingWithoutUser } = booking;
-  const { passwordHash: _unused, ...safeUser } = bookingUser;
+  const { passwordHash: _pw, resetToken: _rt, resetTokenExpiry: _rte, ...safeUser } = bookingUser;
   res.status(201).json({ success: true, booking: { ...bookingWithoutUser, user: safeUser } });
 });
 
