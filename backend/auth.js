@@ -8,11 +8,18 @@ export function signToken(userId) {
   return jwt.sign({ userId }, JWT_SECRET, { expiresIn: '7d' });
 }
 
+// In production the frontend (Vercel) and backend (Render) live on different domains, so the
+// session cookie must be sent cross-site. That requires SameSite=None, which browsers only
+// honor when the cookie is also Secure (HTTPS) — both hosts are HTTPS in production, so this
+// is safe. Locally frontend and backend are on different ports of the same "site" (localhost),
+// where Lax works fine and doesn't require HTTPS.
+const isProduction = process.env.NODE_ENV === 'production';
+
 export function setSessionCookie(res, token) {
   res.cookie(COOKIE_NAME, token, {
     httpOnly: true,
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production',
+    sameSite: isProduction ? 'none' : 'lax',
+    secure: isProduction,
     maxAge: SEVEN_DAYS_MS,
   });
 }

@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Lock, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
-const API_BASE = 'http://localhost:5000/api';
+import { API_BASE } from '../config';
 
 export default function ResetPassword() {
   const { t } = useTranslation();

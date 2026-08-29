@@ -5,8 +5,7 @@ import { CheckCircle2, ArrowLeft, LogIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
-
-const API_BASE = 'http://localhost:5000/api';
+import { API_BASE } from '../config';
 
 export default function Checkout() {
   const { t } = useTranslation();

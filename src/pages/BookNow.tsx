@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { Calendar as CalendarIcon, Clock, CheckCircle2, ArrowLeft, Check, LogIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
-
-const API_BASE = 'http://localhost:5000/api';
+import { API_BASE } from '../config';
 
 interface Service {
   id: string;

@@ -4,8 +4,7 @@ import { Check, ShoppingBag } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useCart, type Product } from '../context/CartContext';
 import PackageFlyer from '../components/ui/PackageFlyer';
-
-const API_BASE = 'http://localhost:5000/api';
+import { API_BASE } from '../config';
 
 function ProductCard({ product }: { product: Product }) {
   const { t } = useTranslation();
