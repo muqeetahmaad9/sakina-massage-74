@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, ShoppingBag, User, LogOut } from 'lucide-react';
+import { Menu, X, User, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
 
 export default function Navbar() {
@@ -12,7 +11,6 @@ export default function Navbar() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-  const { totalItems } = useCart();
   const { user, logout } = useAuth();
 
   const changeLanguage = (lng: 'fr' | 'en') => i18n.changeLanguage(lng);
@@ -106,15 +104,6 @@ export default function Navbar() {
               </Link>
             )}
 
-            <Link to="/cart" className="relative text-charcoal hover:text-gold transition-colors">
-              <ShoppingBag className="w-5 h-5" />
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-gold text-charcoal text-[10px] font-semibold w-4 h-4 rounded-full flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </Link>
-
             <Link
               to="/book"
               className="bg-charcoal text-cream px-6 py-2.5 text-sm tracking-widest uppercase hover:bg-gold transition-colors duration-300"
@@ -125,14 +114,6 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden z-50 flex items-center gap-4">
-            <Link to="/cart" className="relative text-charcoal">
-              <ShoppingBag className="w-6 h-6" />
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-gold text-charcoal text-[10px] font-semibold w-4 h-4 rounded-full flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-charcoal p-2 focus:outline-none"

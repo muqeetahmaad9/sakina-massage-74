@@ -181,6 +181,7 @@
     "applicableServices": "Services covered:",
     "sessionsCount": "Number of sessions:",
     "validity": "Validity:",
+    "noExpiry": "No expiration",
     "added": "Added",
     "addToCart": "Add to cart"
   },

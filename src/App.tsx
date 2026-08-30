@@ -6,8 +6,6 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Certifications from './pages/Certifications';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
 import BookNow from './pages/BookNow';
 import Contact from './pages/Contact';
 import ConsentForm from './pages/ConsentForm';
@@ -16,13 +14,11 @@ import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import ScrollToTop from './components/utils/ScrollToTop';
-import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
     <AuthProvider>
-    <CartProvider>
       <Router>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
@@ -34,8 +30,8 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/certifications" element={<Certifications />} />
               <Route path="/shop" element={<Navigate to="/services" replace />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/cart" element={<Navigate to="/services" replace />} />
+              <Route path="/checkout" element={<Navigate to="/book" replace />} />
               <Route path="/book" element={<BookNow />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/consent" element={<ConsentForm />} />
@@ -49,7 +45,6 @@ function App() {
           <WhatsAppButton />
         </div>
       </Router>
-    </CartProvider>
     </AuthProvider>
   );
 }

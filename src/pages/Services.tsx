@@ -1,18 +1,16 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { Clock, Sparkles, Check, ShoppingBag } from 'lucide-react';
+import { Clock, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useCart, type Product } from '../context/CartContext';
 import PackageFlyer from '../components/ui/PackageFlyer';
-import { API_BASE } from '../config';
 
 interface Service {
   key: string;
   name: string;
   duration: string;
   price: string;
-  image: string;
+  image?: string;
+  isBundle?: boolean;
   hasDetails?: boolean;
   hasBenefits?: boolean;
   hasIdealFor?: boolean;
@@ -26,6 +24,19 @@ interface Category {
 }
 
 const categories: Category[] = [
+  {
+    key: 'bundlePack',
+    title: 'Bundle Pack',
+    services: [
+      {
+        key: 'massageDrainant4Sessions',
+        name: 'Massage Drainant - 4 Séances',
+        duration: '4 x 1 heure',
+        price: '200 €',
+        isBundle: true,
+      },
+    ],
+  },
   {
     key: 'massagesByAnissah',
     title: 'Massages By Anissah',
@@ -146,88 +157,8 @@ const categories: Category[] = [
   },
 ];
 
-function PackageCard({ product }: { product: Product }) {
-  const { t } = useTranslation();
-  const { addItem } = useCart();
-  const [added, setAdded] = useState(false);
-
-  const handleAdd = () => {
-    addItem(product);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1800);
-  };
-
-  return (
-    <div className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col md:flex-row">
-      <div className="md:w-80 shrink-0 aspect-[4/3] overflow-hidden">
-        <PackageFlyer
-          title="Massage Drainage Lymphatique"
-          subtitle={t('shop.flyer.subtitle')}
-          sessions={product.appointments}
-          price={product.price}
-          benefits={[
-            { icon: 'droplet', label: t('shop.flyer.benefit1') },
-            { icon: 'leaf', label: t('shop.flyer.benefit2') },
-            { icon: 'legs', label: t('shop.flyer.benefit3') },
-          ]}
-        />
-      </div>
-
-      <div className="p-6 md:p-10 flex-1 flex flex-col">
-        <h4 className="text-2xl font-serif text-charcoal mb-2">{product.name}</h4>
-        <p className="text-lg font-medium text-olive mb-6">{product.price.toFixed(2)} €</p>
-
-        <ul className="text-sm text-gray-600 font-light space-y-2 mb-8">
-          <li>
-            <span className="font-medium text-charcoal">{t('shop.applicableServices')} </span>
-            {product.applicableServices}
-          </li>
-          <li>
-            <span className="font-medium text-charcoal">{t('shop.sessionsCount')} </span>
-            {product.appointments}
-          </li>
-          <li>
-            <span className="font-medium text-charcoal">{t('shop.validity')} </span>
-            {product.validity}
-          </li>
-        </ul>
-
-        <button
-          onClick={handleAdd}
-          className={`mt-auto inline-flex items-center justify-center gap-2 px-8 py-3 text-sm tracking-widest uppercase transition-all duration-300 self-start ${
-            added ? 'bg-green-600 text-white' : 'bg-charcoal text-cream hover:bg-gold'
-          }`}
-        >
-          {added ? (
-            <>
-              <Check className="w-4 h-4" /> {t('shop.added')}
-            </>
-          ) : (
-            <>
-              <ShoppingBag className="w-4 h-4" /> {t('shop.addToCart')}
-            </>
-          )}
-        </button>
-      </div>
-    </div>
-  );
-}
-
 export default function Services() {
   const { t } = useTranslation();
-  const [products, setProducts] = useState<Product[]>([]);
-  const [productsLoading, setProductsLoading] = useState(true);
-
-  useEffect(() => {
-    fetch(`${API_BASE}/products`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          setProducts(data.products.map((p: Product) => ({ ...p, image: '' })));
-        }
-      })
-      .finally(() => setProductsLoading(false));
-  }, []);
 
   return (
     <div className="min-h-screen pt-24 bg-cream pb-20">
@@ -256,7 +187,6 @@ export default function Services() {
             className="mb-16 last:mb-0"
           >
             <div className="text-center mb-10">
-              <h2 className="text-sm tracking-[0.2em] text-olive uppercase mb-3">{t('services.categoryLabel')}</h2>
               <h3 className="text-3xl md:text-4xl font-serif text-charcoal">{category.title}</h3>
             </div>
 
@@ -273,11 +203,25 @@ export default function Services() {
                     className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col md:flex-row"
                   >
                     <div className="md:w-80 shrink-0 aspect-[4/3] overflow-hidden">
-                      <img
-                        src={service.image}
-                        alt={service.name}
-                        className="object-cover w-full h-full"
-                      />
+                      {service.isBundle ? (
+                        <PackageFlyer
+                          title="Massage Drainage Lymphatique"
+                          subtitle={t('shop.flyer.subtitle')}
+                          sessions={4}
+                          price={200}
+                          benefits={[
+                            { icon: 'droplet', label: t('shop.flyer.benefit1') },
+                            { icon: 'leaf', label: t('shop.flyer.benefit2') },
+                            { icon: 'legs', label: t('shop.flyer.benefit3') },
+                          ]}
+                        />
+                      ) : (
+                        <img
+                          src={service.image}
+                          alt={service.name}
+                          className="object-cover w-full h-full"
+                        />
+                      )}
                     </div>
 
                     <div className="p-6 md:p-10 flex-1">
@@ -292,47 +236,66 @@ export default function Services() {
                         </div>
                       </div>
 
-                      <p className="text-gray-600 font-light leading-relaxed mb-4">{t(`${base}.intro`)}</p>
+                      {service.isBundle ? (
+                        <ul className="text-sm text-gray-600 font-light space-y-2 mb-6">
+                          <li>
+                            <span className="font-medium text-charcoal">{t('shop.applicableServices')} </span>
+                            Massage Drainant
+                          </li>
+                          <li>
+                            <span className="font-medium text-charcoal">{t('shop.sessionsCount')} </span>
+                            4
+                          </li>
+                          <li>
+                            <span className="font-medium text-charcoal">{t('shop.validity')} </span>
+                            {t('shop.noExpiry')}
+                          </li>
+                        </ul>
+                      ) : (
+                        <>
+                          <p className="text-gray-600 font-light leading-relaxed mb-4">{t(`${base}.intro`)}</p>
 
-                      {details.map((para, i) => (
-                        <p key={i} className="text-gray-600 font-light leading-relaxed mb-4">
-                          {para}
-                        </p>
-                      ))}
+                          {details.map((para, i) => (
+                            <p key={i} className="text-gray-600 font-light leading-relaxed mb-4">
+                              {para}
+                            </p>
+                          ))}
 
-                      {service.hasBenefits && (
-                        <div className="mb-4">
-                          <h5 className="text-sm uppercase tracking-widest text-charcoal font-medium mb-3 flex items-center">
-                            <Sparkles className="w-4 h-4 mr-2 text-gold" />
-                            {t('services.benefitsLabel')}
-                          </h5>
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
-                            {benefits.map((b, i) => (
-                              <li key={i} className="text-sm text-gray-600 font-light flex items-start">
-                                <span className="text-gold mr-2">•</span>
-                                {b}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                          {service.hasBenefits && (
+                            <div className="mb-4">
+                              <h5 className="text-sm uppercase tracking-widest text-charcoal font-medium mb-3 flex items-center">
+                                <Sparkles className="w-4 h-4 mr-2 text-gold" />
+                                {t('services.benefitsLabel')}
+                              </h5>
+                              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+                                {benefits.map((b, i) => (
+                                  <li key={i} className="text-sm text-gray-600 font-light flex items-start">
+                                    <span className="text-gold mr-2">•</span>
+                                    {b}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
 
-                      {service.hasIdealFor && (
-                        <div className="mb-4">
-                          <h5 className="text-sm uppercase tracking-widest text-charcoal font-medium mb-3">{t('services.idealForLabel')}</h5>
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
-                            {idealFor.map((b, i) => (
-                              <li key={i} className="text-sm text-gray-600 font-light flex items-start">
-                                <span className="text-gold mr-2">•</span>
-                                {b}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                          {service.hasIdealFor && (
+                            <div className="mb-4">
+                              <h5 className="text-sm uppercase tracking-widest text-charcoal font-medium mb-3">{t('services.idealForLabel')}</h5>
+                              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+                                {idealFor.map((b, i) => (
+                                  <li key={i} className="text-sm text-gray-600 font-light flex items-start">
+                                    <span className="text-gold mr-2">•</span>
+                                    {b}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
 
-                      {service.hasNote && (
-                        <p className="text-sm text-gray-500 italic font-light mb-6">{t(`${base}.note`)}</p>
+                          {service.hasNote && (
+                            <p className="text-sm text-gray-500 italic font-light mb-6">{t(`${base}.note`)}</p>
+                          )}
+                        </>
                       )}
 
                       <Link
@@ -348,29 +311,6 @@ export default function Services() {
             </div>
           </motion.div>
         ))}
-
-        {/* Package deals (formerly the standalone Shop page) */}
-        {!productsLoading && products.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-16 last:mb-0"
-          >
-            <div className="text-center mb-10">
-              <h2 className="text-sm tracking-[0.2em] text-olive uppercase mb-3">{t('services.categoryLabel')}</h2>
-              <h3 className="text-3xl md:text-4xl font-serif text-charcoal">{t('shop.pageTitle')}</h3>
-              <p className="text-gray-500 font-light max-w-xl mx-auto mt-4">{t('shop.pageSubtitle')}</p>
-            </div>
-
-            <div className="space-y-8">
-              {products.map((product) => (
-                <PackageCard key={product.id} product={product} />
-              ))}
-            </div>
-          </motion.div>
-        )}
       </div>
     </div>
   );

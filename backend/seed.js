@@ -3,6 +3,8 @@
 import { prisma } from './db.js';
 
 const services = [
+  // Bundle pack listed first so it always appears at the top of Services/BookNow.
+  { category: 'Bundle Pack', name: 'Massage Drainant - 4 Séances', duration: '4 x 1 heure', price: 200 },
   { category: 'Massages By Anissah', name: 'Massage Duo - Résa Uniquement Le Samedi', duration: '1 heure', price: 120 },
   { category: 'Massages By Anissah', name: 'La Rose Thérapie & Massage Body Touch Oriental', duration: '1h30', price: 150 },
   { category: "Les Cures d'Anissah", name: 'Massage Drainant', duration: '1 heure', price: 75 },

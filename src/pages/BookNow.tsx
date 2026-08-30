@@ -15,6 +15,7 @@ interface Service {
 }
 
 const categoryOrder = [
+  'Bundle Pack',
   'Massages By Anissah',
   "Les Cures d'Anissah",
   "Les Formules Head Spa d'Anissah",

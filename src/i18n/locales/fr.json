@@ -181,6 +181,7 @@
     "applicableServices": "Prestations concernées :",
     "sessionsCount": "Nombre de séances :",
     "validity": "Validité :",
+    "noExpiry": "Sans expiration",
     "added": "Ajouté",
     "addToCart": "Ajouter au panier"
   },
