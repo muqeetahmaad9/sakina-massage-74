@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+const reviewKeys = ['review1', 'review2', 'review3', 'review4', 'review5', 'review6'];
 
 const services = [
   {
@@ -207,6 +209,41 @@ export default function Home() {
           <Link to="/book" className="inline-block bg-gold text-charcoal px-10 py-4 text-sm tracking-widest uppercase hover:bg-cream transition-all duration-300 font-medium">
             {t('home.video.cta')}
           </Link>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-24 bg-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-sm tracking-[0.2em] text-olive uppercase mb-4">{t('home.reviews.eyebrow')}</h2>
+            <h3 className="text-4xl md:text-5xl font-serif text-charcoal">{t('home.reviews.title')}</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {reviewKeys.map((key, index) => (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-cream p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+              >
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                  ))}
+                </div>
+                <p className="text-gray-600 font-light leading-relaxed mb-6 italic">
+                  "{t(`home.reviews.items.${key}.text`)}"
+                </p>
+                <p className="text-sm font-medium text-charcoal tracking-wide">
+                  {t(`home.reviews.items.${key}.author`)}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

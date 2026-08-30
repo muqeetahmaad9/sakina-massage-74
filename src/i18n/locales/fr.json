@@ -56,6 +56,36 @@
       "text": "Échappez au quotidien. Prenez un instant pour respirer, vous détendre et vous ressourcer entre les mains expertes de notre praticienne.",
       "cta": "Commencer l'expérience"
     },
+    "reviews": {
+      "eyebrow": "Ce Qu'ils En Disent",
+      "title": "Avis de Nos Clients",
+      "items": {
+        "review1": {
+          "text": "Un moment de pure détente. Anissah a des mains magiques, je ressors toujours apaisée et légère. Le Head Spa est juste incroyable.",
+          "author": "Nadia R."
+        },
+        "review2": {
+          "text": "Massage drainant au top, j'ai vraiment senti la différence dès la première séance. L'accueil est chaleureux et le cadre très reposant.",
+          "author": "Karine L."
+        },
+        "review3": {
+          "text": "Le massage duo avec ma sœur était une super expérience à partager. On a adoré, on reviendra c'est sûr !",
+          "author": "Sophie M."
+        },
+        "review4": {
+          "text": "Cabinet propre, ambiance zen, et surtout un vrai savoir-faire. Le massage deep tissue m'a soulagé de mes tensions au dos.",
+          "author": "Thomas D."
+        },
+        "review5": {
+          "text": "Sakina Massage 974 est devenu mon rendez-vous bien-être mensuel. Professionnalisme et gentillesse à chaque visite.",
+          "author": "Fatima B."
+        },
+        "review6": {
+          "text": "Le foot spa était exactement ce dont j'avais besoin après une longue semaine. Merci Anissah pour ce moment de douceur.",
+          "author": "Julien P."
+        }
+      }
+    },
     "instagram": {
       "title": "Suivez notre voyage bien-être",
       "viewOn": "Voir sur Instagram",
