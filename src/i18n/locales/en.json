@@ -4,6 +4,7 @@
     "services": "Services",
     "shop": "Shop",
     "gallery": "Gallery",
+    "certifications": "Certifications",
     "contact": "Contact",
     "login": "Log in",
     "logout": "Log out",
@@ -369,6 +370,17 @@
     "sending": "Sending...",
     "submitCta": "Submit my form"
   },
+  "certifications": {
+    "pageTitle": "Certifications",
+    "pageSubtitle": "Trained by Magic Hands, the school of wellness magicians, to guarantee you expert care.",
+    "magicHands": "Magic Hands",
+    "items": {
+      "magicCupping": "Magic Cupping",
+      "deepTissue": "Deep Tissue",
+      "massageThailandais": "Thai Massage",
+      "mixMassageArts": "Mix Massage Arts"
+    }
+  },
   "gallery": {
     "close": "Close",
     "alt": {
@@ -386,7 +398,23 @@
       "anissah1": "Applying massage oil",
       "anissah2": "Relaxing Oriental massage",
       "anissah3": "Foot reflexology",
-      "anissah4": "Leg massage"
+      "anissah4": "Leg massage",
+      "salon1": "Treatment room with hydro-massage foot bath",
+      "salon2": "Treatment room, cocooning atmosphere",
+      "salon3": "Massage table, Sakina Massage 974 decor",
+      "salon4": "Interior hallway of the salon",
+      "salon5": "Treatment room with services display",
+      "salon6": "Salon entrance, glass door with services displayed",
+      "salon7": "Outdoor terrace, relaxation corner",
+      "salon8": "Massage table and storage",
+      "salon9": "Nail care area",
+      "salon10": "Waiting room with seating",
+      "salon11": "Hallway with oriental decor",
+      "salon12": "Massage table, treatment room",
+      "salon13": "Lounge corner, armchairs and sofa",
+      "salon14": "Treatment room with wall decor",
+      "salon15": "Relaxation area with sofa and armchairs",
+      "salon16": "Reading corner, water dispenser"
     }
   },
   "login": {

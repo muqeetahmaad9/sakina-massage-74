@@ -4,6 +4,7 @@
     "services": "Prestations",
     "shop": "Boutique",
     "gallery": "Galerie",
+    "certifications": "Certifications",
     "contact": "Contact",
     "login": "Connexion",
     "logout": "Déconnexion",
@@ -369,6 +370,17 @@
     "sending": "Envoi en cours...",
     "submitCta": "Envoyer ma fiche"
   },
+  "certifications": {
+    "pageTitle": "Certifications",
+    "pageSubtitle": "Formée par Magic Hands, l'école des magiciens du bien-être, pour vous garantir des soins d'experts.",
+    "magicHands": "Magic Hands",
+    "items": {
+      "magicCupping": "Magic Cupping",
+      "deepTissue": "Deep Tissue",
+      "massageThailandais": "Massage Thaïlandais",
+      "mixMassageArts": "Mix Massage Arts"
+    }
+  },
   "gallery": {
     "close": "Fermer",
     "alt": {
@@ -386,7 +398,23 @@
       "anissah1": "Application d'huile de massage",
       "anissah2": "Massage relaxant oriental",
       "anissah3": "Réflexologie plantaire",
-      "anissah4": "Massage des jambes"
+      "anissah4": "Massage des jambes",
+      "salon1": "Cabine de soin avec baignoire hydromassante",
+      "salon2": "Salle de soin, ambiance cocooning",
+      "salon3": "Table de massage, décoration Sakina Massage 974",
+      "salon4": "Couloir intérieur du salon",
+      "salon5": "Cabine de soin avec présentation des prestations",
+      "salon6": "Entrée du salon, porte vitrée avec prestations affichées",
+      "salon7": "Terrasse extérieure, coin détente",
+      "salon8": "Table de massage et rangements",
+      "salon9": "Espace onglerie",
+      "salon10": "Salle d'attente avec sièges",
+      "salon11": "Couloir avec décoration orientale",
+      "salon12": "Table de massage, chambre de soin",
+      "salon13": "Coin salon, fauteuils et canapé",
+      "salon14": "Salle de soin avec décoration murale",
+      "salon15": "Espace détente avec canapé et fauteuils",
+      "salon16": "Coin lecture, distributeur d'eau"
     }
   },
   "login": {

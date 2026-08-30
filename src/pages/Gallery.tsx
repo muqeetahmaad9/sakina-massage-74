@@ -99,6 +99,28 @@ const sections: GallerySection[] = [
       },
     ],
   },
+  {
+    key: 'salon',
+    title: 'Le Salon',
+    images: [
+      { src: '/images/salon/salon-01.jpg', altKey: 'salon1' },
+      { src: '/images/salon/salon-02.jpg', altKey: 'salon2' },
+      { src: '/images/salon/salon-03.jpg', altKey: 'salon3' },
+      { src: '/images/salon/salon-04.jpg', altKey: 'salon4' },
+      { src: '/images/salon/salon-05.jpg', altKey: 'salon5' },
+      { src: '/images/salon/salon-06.jpg', altKey: 'salon6' },
+      { src: '/images/salon/salon-07.jpg', altKey: 'salon7' },
+      { src: '/images/salon/salon-08.jpg', altKey: 'salon8' },
+      { src: '/images/salon/salon-09.jpg', altKey: 'salon9' },
+      { src: '/images/salon/salon-10.jpg', altKey: 'salon10' },
+      { src: '/images/salon/salon-11.jpg', altKey: 'salon11' },
+      { src: '/images/salon/salon-12.jpg', altKey: 'salon12' },
+      { src: '/images/salon/salon-13.jpg', altKey: 'salon13' },
+      { src: '/images/salon/salon-14.jpg', altKey: 'salon14' },
+      { src: '/images/salon/salon-15.jpg', altKey: 'salon15' },
+      { src: '/images/salon/salon-16.jpg', altKey: 'salon16' },
+    ],
+  },
 ];
 
 export default function Gallery() {

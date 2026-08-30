@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
-import LogoMark from '../ui/Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +39,7 @@ export default function Navbar() {
     { name: t('nav.services'), path: '/services' },
     { name: t('nav.shop'), path: '/shop' },
     { name: t('nav.gallery'), path: '/gallery' },
+    { name: t('nav.certifications'), path: '/certifications' },
     { name: t('nav.contact'), path: '/contact' },
   ];
 
@@ -51,20 +51,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2.5 z-50 shrink-0">
-            <LogoMark className="w-9 h-9 md:w-12 md:h-12 shrink-0" gradientId="navbar-logo-gradient" />
-            <div className="flex flex-col items-start leading-tight">
-              <span className="font-serif text-base md:text-xl tracking-wide text-charcoal font-semibold uppercase whitespace-nowrap">
-                Sakina Massage 974
-              </span>
-              <span className="hidden md:block text-[10px] tracking-widest text-olive uppercase mt-0.5 whitespace-nowrap">
-                {t('nav.tagline')}
-              </span>
-            </div>
+          <Link to="/" className="flex flex-col items-start z-50 shrink-0">
+            <img src="/images/logo.png" alt="Sakina Massage 974" className="h-10 md:h-14 w-auto" />
+            <span className="hidden md:block text-[10px] tracking-widest text-olive uppercase mt-0.5 whitespace-nowrap">
+              {t('nav.tagline')}
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-5 lg:gap-7">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -130,7 +125,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden z-50 flex items-center gap-4">
+          <div className="lg:hidden z-50 flex items-center gap-4">
             <Link to="/cart" className="relative text-charcoal">
               <ShoppingBag className="w-6 h-6" />
               {totalItems > 0 && (

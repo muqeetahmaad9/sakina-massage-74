@@ -100,8 +100,8 @@ export default function Home() {
             >
               <div className="aspect-[3/4] overflow-hidden rounded-tl-[100px] rounded-br-[100px]">
                 <img
-                  src="https://images.pexels.com/photos/11001991/pexels-photo-11001991.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1000&w=800"
-                  alt="Spa Products"
+                  src="/images/anissah-portrait.jpg"
+                  alt="Anissah, praticienne Sakina Massage 974"
                   className="object-cover w-full h-full"
                 />
               </div>

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../ui/LocationMap';
-import LogoMark from '../ui/Logo';
 
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -31,10 +30,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <LogoMark className="w-10 h-10 shrink-0" gradientId="footer-logo-gradient" />
-              <h3 className="font-serif text-2xl tracking-widest">SAKINA MASSAGE 974</h3>
-            </div>
+            <img src="/images/logo.png" alt="Sakina Massage 974" className="h-14 w-auto mb-4" />
             <p className="text-sm text-gray-400 mb-6 font-light leading-relaxed">
               {t('footer.brandText')}
             </p>
@@ -57,6 +53,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/consent" className="hover:text-gold transition-colors">{t('footer.consentForm')}</Link>
+              </li>
+              <li>
+                <Link to="/certifications" className="hover:text-gold transition-colors">{t('nav.certifications')}</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-gold transition-colors">{t('nav.contact')}</Link>
