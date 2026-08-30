@@ -26,7 +26,7 @@ export default function Cart() {
             <h2 className="text-2xl font-serif text-charcoal mb-4">{t('cart.empty.title')}</h2>
             <p className="text-gray-500 font-light mb-8">{t('cart.empty.text')}</p>
             <Link
-              to="/shop"
+              to="/services"
               className="inline-flex items-center justify-center bg-charcoal text-cream px-8 py-4 text-sm tracking-widest uppercase hover:bg-gold transition-all duration-300"
             >
               {t('cart.empty.cta')}
@@ -97,7 +97,7 @@ export default function Cart() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/shop"
+                  to="/services"
                   className="flex-1 border border-charcoal text-charcoal px-8 py-4 text-sm tracking-widest uppercase text-center hover:bg-gray-50 transition-colors"
                 >
                   {t('cart.continueShopping')}

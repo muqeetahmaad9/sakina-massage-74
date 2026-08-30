@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import WhatsAppButton from './components/ui/WhatsAppButton';
@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Certifications from './pages/Certifications';
-import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import BookNow from './pages/BookNow';
@@ -34,7 +33,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/certifications" element={<Certifications />} />
-              <Route path="/shop" element={<Shop />} />
+              <Route path="/shop" element={<Navigate to="/services" replace />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/book" element={<BookNow />} />

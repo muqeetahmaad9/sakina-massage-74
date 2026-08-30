@@ -23,7 +23,7 @@ export default function Checkout() {
           <h1 className="text-3xl font-serif text-charcoal mb-4">{t('checkout.emptyCart.title')}</h1>
           <p className="text-gray-500 font-light mb-8">{t('checkout.emptyCart.text')}</p>
           <Link
-            to="/shop"
+            to="/services"
             className="inline-flex items-center justify-center bg-charcoal text-cream px-8 py-4 text-sm tracking-widest uppercase hover:bg-gold transition-all duration-300"
           >
             {t('checkout.emptyCart.cta')}
