@@ -10,7 +10,7 @@ const services = [
     key: 'headSpaPremium',
     title: 'Head Spa Premium',
     price: '100 €',
-    image: 'https://images.pexels.com/photos/3865827/pexels-photo-3865827.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200'
+    image: '/images/flyers/headspa-japonais-flyer.jpg'
   },
   {
     key: 'roseTherapie',

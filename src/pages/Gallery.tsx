@@ -35,6 +35,7 @@ const sections: GallerySection[] = [
       { src: '/images/salon/salon-14.jpg', altKey: 'salon14' },
       { src: '/images/salon/salon-15.jpg', altKey: 'salon15' },
       { src: '/images/salon/salon-16.jpg', altKey: 'salon16' },
+      { src: '/images/salon/footspa-action.jpg', altKey: 'footspaAction' },
     ],
   },
   {

@@ -86,7 +86,7 @@ const categories: Category[] = [
         name: 'Head Spa Premium',
         duration: '1 heure',
         price: '100 €',
-        image: 'https://images.pexels.com/photos/3865827/pexels-photo-3865827.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
+        image: '/images/flyers/headspa-japonais-flyer.jpg',
         hasBenefits: true,
       },
       {
@@ -148,7 +148,7 @@ const categories: Category[] = [
         name: 'Foot Spa',
         duration: '1 heure',
         price: '100 €',
-        image: 'https://images.pexels.com/photos/4085445/pexels-photo-4085445.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
+        image: '/images/flyers/footspa-flyer.jpg',
         hasDetails: true,
         hasBenefits: true,
         hasNote: true,
