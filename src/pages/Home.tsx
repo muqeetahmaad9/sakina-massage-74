@@ -10,7 +10,8 @@ const services = [
     key: 'headSpaPremium',
     title: 'Head Spa Premium',
     price: '100 €',
-    image: '/images/flyers/headspa-japonais-flyer.jpg'
+    image: '/images/flyers/headspa-japonais-flyer.jpg',
+    isFlyerImage: true
   },
   {
     key: 'roseTherapie',
@@ -152,11 +153,17 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group cursor-pointer bg-cream p-4 rounded-2xl hover:shadow-xl transition-all duration-500"
               >
-                <div className="overflow-hidden rounded-xl mb-6 relative aspect-[4/3]">
+                <div
+                  className={`overflow-hidden rounded-xl mb-6 relative aspect-[4/3] ${
+                    service.isFlyerImage ? 'bg-[#f6f1e7]' : ''
+                  }`}
+                >
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+                    className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${
+                      service.isFlyerImage ? 'object-contain' : 'object-cover'
+                    }`}
                   />
                   <div className="absolute top-4 right-4 bg-cream/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-charcoal">
                     {t(`home.services.items.${service.key}.time`)}

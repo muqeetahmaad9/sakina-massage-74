@@ -11,6 +11,8 @@ interface Service {
   price: string;
   image?: string;
   isBundle?: boolean;
+  /** True for tall poster-style flyer images that should be shown whole (letterboxed), not cropped. */
+  isFlyerImage?: boolean;
   hasDetails?: boolean;
   hasBenefits?: boolean;
   hasIdealFor?: boolean;
@@ -87,6 +89,7 @@ const categories: Category[] = [
         duration: '1 heure',
         price: '100 €',
         image: '/images/flyers/headspa-japonais-flyer.jpg',
+        isFlyerImage: true,
         hasBenefits: true,
       },
       {
@@ -149,6 +152,7 @@ const categories: Category[] = [
         duration: '1 heure',
         price: '100 €',
         image: '/images/flyers/footspa-flyer.jpg',
+        isFlyerImage: true,
         hasDetails: true,
         hasBenefits: true,
         hasNote: true,
@@ -202,7 +206,11 @@ export default function Services() {
                     key={service.name}
                     className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col md:flex-row"
                   >
-                    <div className="md:w-80 shrink-0 aspect-[4/3] overflow-hidden">
+                    <div
+                      className={`md:w-80 shrink-0 overflow-hidden ${
+                        service.isFlyerImage ? 'aspect-[3/4] bg-[#f6f1e7]' : 'aspect-[4/3]'
+                      }`}
+                    >
                       {service.isBundle ? (
                         <PackageFlyer
                           title="Massage Drainage Lymphatique"
@@ -219,7 +227,7 @@ export default function Services() {
                         <img
                           src={service.image}
                           alt={service.name}
-                          className="object-cover w-full h-full"
+                          className={`w-full h-full ${service.isFlyerImage ? 'object-contain' : 'object-cover'}`}
                         />
                       )}
                     </div>
