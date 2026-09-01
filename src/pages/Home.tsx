@@ -17,7 +17,8 @@ const services = [
     key: 'roseTherapie',
     title: 'La Rose Thérapie & Body Touch Oriental',
     price: '150 €',
-    image: 'https://images.pexels.com/photos/6186755/pexels-photo-6186755.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200'
+    image: '/images/flyers/rose-therapie-flyer.jpg',
+    isFlyerImage: true
   },
   {
     key: 'deepTissueCupping',
