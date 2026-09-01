@@ -118,14 +118,15 @@ const categories: Category[] = [
   },
   {
     key: 'bonCadeau',
-    title: "Bon De Cadeau D'anissah",
+    title: "Bon Cadeau d'Anissah",
     services: [
       {
         key: 'bonCadeauMassageRelaxant',
         name: 'Bon Cadeau - Massage Relaxant',
         duration: '1 heure',
         price: '60 €',
-        image: 'https://images.pexels.com/photos/12899589/pexels-photo-12899589.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
+        image: '/images/flyers/bon-cadeau-flyer.jpg',
+        isFlyerImage: true,
         hasDetails: true,
       },
     ],

@@ -11,7 +11,7 @@ const services = [
   { category: "Les Formules Head Spa d'Anissah", name: 'Head Spa Premium', duration: '1 heure', price: 100 },
   { category: "Les Formules Head Spa d'Anissah", name: 'Head Spa + Massage Relaxant', duration: '1 heure', price: 100 },
   { category: "Les Formules Head Spa d'Anissah", name: 'Head Spa + Massage Relaxant En Duo', duration: '1h30', price: 150 },
-  { category: "Bon De Cadeau D'anissah", name: 'Bon Cadeau - Massage Relaxant', duration: '1 heure', price: 60 },
+  { category: "Bon Cadeau d'Anissah", name: 'Bon Cadeau - Massage Relaxant', duration: '1 heure', price: 60 },
   { category: 'Ventousothérapie / Cupping Therapy By Anissah', name: 'Massage Deep Tissue + Ventouse', duration: '1 heure', price: 110 },
   { category: 'Foot Spa', name: 'Foot Spa', duration: '1 heure', price: 100 },
 ];
@@ -32,8 +32,16 @@ async function main() {
     if (!existing) {
       await prisma.service.create({ data: s });
       console.log(`Created service: ${s.name}`);
+    } else if (existing.category !== s.category || existing.duration !== s.duration || existing.price !== s.price) {
+      // Self-heal: keep existing rows in sync with the seed catalog (e.g. category renames)
+      // instead of only creating brand-new rows.
+      await prisma.service.update({
+        where: { id: existing.id },
+        data: { category: s.category, duration: s.duration, price: s.price },
+      });
+      console.log(`Updated service: ${s.name}`);
     } else {
-      console.log(`Skipped (already exists): ${s.name}`);
+      console.log(`Skipped (already up to date): ${s.name}`);
     }
   }
 

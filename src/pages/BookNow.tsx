@@ -19,7 +19,7 @@ const categoryOrder = [
   'Massages By Anissah',
   "Les Cures d'Anissah",
   "Les Formules Head Spa d'Anissah",
-  "Bon De Cadeau D'anissah",
+  "Bon Cadeau d'Anissah",
   'Ventousothérapie / Cupping Therapy By Anissah',
   'Foot Spa',
 ];
