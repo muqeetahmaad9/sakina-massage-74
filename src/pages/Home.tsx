@@ -24,7 +24,8 @@ const services = [
     key: 'deepTissueCupping',
     title: 'Massage Deep Tissue + Ventouse',
     price: '110 €',
-    image: 'https://images.pexels.com/photos/8312867/pexels-photo-8312867.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200'
+    image: '/images/flyers/massage-relaxant-cupping-flyer.jpg',
+    isFlyerImage: true
   }
 ];
 
