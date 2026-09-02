@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const WHATSAPP_NUMBER = "923035442047"; // Configurable
+const WHATSAPP_NUMBER = "262692208484"; // Configurable
 
 export default function WhatsAppButton() {
   const { t } = useTranslation();

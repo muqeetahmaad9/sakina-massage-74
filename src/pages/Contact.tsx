@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../components/ui/LocationMap';
 
-const WHATSAPP_NUMBER = "923035442047"; // Configurable
-const PHONE_NUMBER = "+92 303 5442047"; // Configurable
-const EMAIL = "contact@sakinamassage974.fr"; // Configurable
+const WHATSAPP_NUMBER = "262692208484"; // Configurable
+const PHONE_NUMBER = "0692 20 84 84"; // Configurable
+const EMAIL = "sakinamassage974@gmail.com"; // Configurable
 
 export default function Contact() {
   const { t } = useTranslation();

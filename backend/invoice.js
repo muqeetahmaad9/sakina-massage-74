@@ -43,7 +43,7 @@ export function generateInvoicePdf(params) {
       .fillColor(GRAY)
       .text('130 Rue Marius et Ary Leblond', 50, 100)
       .text('Saint-Paul, 97460, La Réunion, France', 50, 112)
-      .text('WhatsApp : +92 303 5442047', 50, 124);
+      .text('WhatsApp : 0692 20 84 84', 50, 124);
 
     // Invoice meta (right side)
     doc

@@ -74,11 +74,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-gold" />
-                <span>+92 303 5442047</span>
+                <span>0692 20 84 84</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-gold" />
-                <span>contact@sakinamassage974.fr</span>
+                <span>sakinamassage974@gmail.com</span>
               </li>
             </ul>
           </div>

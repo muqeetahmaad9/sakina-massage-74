@@ -456,7 +456,7 @@ export default function BookNow() {
                   </button>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
                     <a
-                      href={`https://wa.me/923035442047?text=${encodeURIComponent(
+                      href={`https://wa.me/262692208484?text=${encodeURIComponent(
                         t('booknow.step5.whatsappMessage', {
                           services: confirmedBooking.services.map((t) => t.name).join(', '),
                           date: new Date(confirmedBooking.date).toLocaleDateString(dateLocale),
