@@ -194,3 +194,18 @@ export function consentFormEmailHtml({ user, form, booking }) {
     </div>
   `;
 }
+
+export function corporateFormEmailHtml({ user, form }) {
+  return `
+    <div style="font-family: Georgia, serif; color: #2b2926; max-width: 560px;">
+      <h2 style="color: #2b2926;">Nouveau formulaire Tarif Personnel — Sakina Massage 974</h2>
+      <p><strong>Client :</strong> ${form.firstName} ${form.lastName} (${user.email}, ${form.phone})</p>
+      <p><strong>Date de naissance :</strong> ${form.birthDate}</p>
+      <p><strong>Type d'entreprise :</strong> ${form.organizationType || '—'}</p>
+      <p><strong>Nom de la société :</strong> ${form.companyName || '—'}</p>
+      <p><strong>Tranche d'effectifs :</strong> ${form.employeeCountRange || '—'}</p>
+      <p><strong>Nombre exact d'employés :</strong> ${form.employeeCount || '—'}</p>
+      <p style="color: #6b6b6b; font-size: 13px;">Le formulaire est joint à cet email en PDF.</p>
+    </div>
+  `;
+}

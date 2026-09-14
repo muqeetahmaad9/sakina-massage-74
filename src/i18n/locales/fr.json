@@ -365,6 +365,50 @@
     "sending": "Envoi en cours...",
     "submitCta": "Envoyer ma fiche"
   },
+  "corporate": {
+    "errors": {
+      "generic": "Une erreur est survenue.",
+      "server": "Impossible de contacter le serveur."
+    },
+    "success": {
+      "title": "Formulaire Envoyé",
+      "text": "Merci d'avoir complété votre formulaire tarif personnel. Nous vérifierons votre éligibilité au tarif réservé aux personnels du secteur public & privé.",
+      "homeCta": "Retour à l'accueil"
+    },
+    "loginRequired": {
+      "title": "Connexion requise",
+      "text": "Vous devez être connecté(e) pour remplir ce formulaire."
+    },
+    "signup": "S'inscrire",
+    "practitionerTitle": "Formulaire Tarif Personnel",
+    "intro": "Ce tarif est réservé aux personnels du secteur public & privé. Merci de compléter ce formulaire pour vérifier votre éligibilité.",
+    "sections": {
+      "personalInfo": "Informations Personnelles",
+      "companyInfo": "Informations Entreprise"
+    },
+    "fields": {
+      "lastName": "Nom",
+      "firstName": "Prénom",
+      "birthDate": "Date de naissance",
+      "phone": "Téléphone",
+      "organizationType": "Type d'entreprise",
+      "companyName": "Nom de la société",
+      "companyNamePlaceholder": "Ex: Mairie de Saint-Paul, Clinique...",
+      "employeeCountRange": "Tranche d'effectifs",
+      "employeeCount": "Nombre exact d'employés",
+      "employeeCountPlaceholder": "Ex: 42"
+    },
+    "options": {
+      "publique": "Publique",
+      "privee": "Privée",
+      "range1": "1–10",
+      "range2": "11–50",
+      "range3": "51–250",
+      "range4": "250+"
+    },
+    "sending": "Envoi en cours...",
+    "submitCta": "Envoyer mon formulaire"
+  },
   "certifications": {
     "pageTitle": "Certifications",
     "pageSubtitle": "Formée par Magic Hands, l'école des magiciens du bien-être, pour vous garantir des soins d'experts.",
@@ -500,6 +544,7 @@
     "brandText": "Votre espace de bien-être et de relaxation à Saint-Paul. Découvrez nos massages et soins Head Spa pour une détente absolue.",
     "navigation": "Navigation",
     "consentForm": "Fiche de Renseignements",
+    "corporateForm": "Formulaire Tarif Personnel",
     "hoursTitle": "Horaires",
     "hours": {
       "monday": "Lundi",

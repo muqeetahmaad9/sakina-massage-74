@@ -19,9 +19,10 @@ model User {
   resetTokenExpiry  DateTime?
   createdAt         DateTime  @default(now())
 
-  bookings     Booking[]
-  consentForms ConsentForm[]
-  orders       Order[]
+  bookings       Booking[]
+  consentForms   ConsentForm[]
+  orders         Order[]
+  corporateForms CorporateForm[]
 }
 
 model Service {
@@ -119,4 +120,22 @@ model ConsentForm {
 
   user    User     @relation(fields: [userId], references: [id])
   booking Booking? @relation(fields: [bookingId], references: [id])
+}
+
+// Tarif Personnel eligibility form for clients booking via the public/private
+// sector staff rate — separate from ConsentForm (health/wellness intake).
+model CorporateForm {
+  id                String   @id @default(cuid())
+  userId            String
+  lastName          String
+  firstName         String
+  birthDate         String
+  phone             String
+  organizationType  String?  // "publique" | "privee"
+  companyName       String?
+  employeeCountRange String? // "1-10" | "11-50" | "51-250" | "250+"
+  employeeCount     String?
+  createdAt         DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
 }

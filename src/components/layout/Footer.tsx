@@ -55,6 +55,9 @@ export default function Footer() {
                 <Link to="/consent" className="hover:text-gold transition-colors">{t('footer.consentForm')}</Link>
               </li>
               <li>
+                <Link to="/reservation-entreprise" className="hover:text-gold transition-colors">{t('footer.corporateForm')}</Link>
+              </li>
+              <li>
                 <Link to="/certifications" className="hover:text-gold transition-colors">{t('nav.certifications')}</Link>
               </li>
               <li>

@@ -9,6 +9,7 @@ import Certifications from './pages/Certifications';
 import BookNow from './pages/BookNow';
 import Contact from './pages/Contact';
 import ConsentForm from './pages/ConsentForm';
+import CorporateForm from './pages/CorporateForm';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
@@ -35,6 +36,7 @@ function App() {
               <Route path="/book" element={<BookNow />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/consent" element={<ConsentForm />} />
+              <Route path="/reservation-entreprise" element={<CorporateForm />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />

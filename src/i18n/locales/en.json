@@ -365,6 +365,50 @@
     "sending": "Sending...",
     "submitCta": "Submit my form"
   },
+  "corporate": {
+    "errors": {
+      "generic": "An error occurred.",
+      "server": "Unable to reach the server."
+    },
+    "success": {
+      "title": "Form Sent",
+      "text": "Thank you for completing your staff-rate form. We'll verify your eligibility for the rate reserved for public and private sector staff.",
+      "homeCta": "Back to home"
+    },
+    "loginRequired": {
+      "title": "Login required",
+      "text": "You must be logged in to fill in this form."
+    },
+    "signup": "Sign up",
+    "practitionerTitle": "Staff Rate Form",
+    "intro": "This rate is reserved for public and private sector staff. Please complete this form to verify your eligibility.",
+    "sections": {
+      "personalInfo": "Personal Information",
+      "companyInfo": "Company Information"
+    },
+    "fields": {
+      "lastName": "Last name",
+      "firstName": "First name",
+      "birthDate": "Date of birth",
+      "phone": "Phone",
+      "organizationType": "Organization type",
+      "companyName": "Company name",
+      "companyNamePlaceholder": "E.g.: Saint-Paul City Hall, Clinic...",
+      "employeeCountRange": "Employee count range",
+      "employeeCount": "Exact employee count",
+      "employeeCountPlaceholder": "E.g.: 42"
+    },
+    "options": {
+      "publique": "Public",
+      "privee": "Private",
+      "range1": "1–10",
+      "range2": "11–50",
+      "range3": "51–250",
+      "range4": "250+"
+    },
+    "sending": "Sending...",
+    "submitCta": "Submit my form"
+  },
   "certifications": {
     "pageTitle": "Certifications",
     "pageSubtitle": "Trained by Magic Hands, the school of wellness magicians, to guarantee you expert care.",
@@ -500,6 +544,7 @@
     "brandText": "Your wellness and relaxation space in Saint-Paul. Discover our massages and Head Spa treatments for absolute relaxation.",
     "navigation": "Navigation",
     "consentForm": "Intake Form",
+    "corporateForm": "Staff Rate Form",
     "hoursTitle": "Opening Hours",
     "hours": {
       "monday": "Monday",

@@ -8,6 +8,7 @@ import productsRoutes from './routes/products.js';
 import bookingsRoutes from './routes/bookings.js';
 import ordersRoutes from './routes/orders.js';
 import consentRoutes from './routes/consent.js';
+import corporateRoutes from './routes/corporate.js';
 
 dotenv.config();
 
@@ -49,6 +50,7 @@ app.use('/api/products', productsRoutes);
 app.use('/api/bookings', bookingsRoutes);
 app.use('/api/orders', ordersRoutes);
 app.use('/api/consent', consentRoutes);
+app.use('/api/corporate', corporateRoutes);
 
 // Handle Contact Form Submissions (still a simple stub — no dedicated table yet)
 app.post('/api/contact', (req, res) => {
