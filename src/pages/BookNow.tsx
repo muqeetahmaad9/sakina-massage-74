@@ -445,12 +445,20 @@ export default function BookNow() {
                 </div>
 
                 <div className="flex flex-col gap-4 max-w-sm mx-auto">
-                  <button
-                    onClick={() => (window.location.href = `/consent?bookingId=${confirmedBooking.id}`)}
-                    className="bg-charcoal text-white px-8 py-4 rounded-xl text-sm font-medium tracking-widest uppercase hover:bg-gold transition-colors w-full"
-                  >
-                    {t('booknow.step5.consentCta')}
-                  </button>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <button
+                      onClick={() => (window.location.href = `/consent?bookingId=${confirmedBooking.id}`)}
+                      className="bg-charcoal text-white px-6 py-4 rounded-xl text-sm font-medium tracking-widest uppercase hover:bg-gold transition-colors w-full"
+                    >
+                      {t('booknow.step5.consentCta')}
+                    </button>
+                    <button
+                      onClick={() => (window.location.href = `/reservation-entreprise?bookingId=${confirmedBooking.id}`)}
+                      className="border border-charcoal text-charcoal px-6 py-4 rounded-xl text-sm font-medium tracking-widest uppercase hover:bg-gray-50 transition-colors w-full"
+                    >
+                      {t('booknow.step5.corporateCta')}
+                    </button>
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
                     <a
                       href={`https://wa.me/262692208484?text=${encodeURIComponent(

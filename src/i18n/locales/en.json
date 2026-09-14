@@ -271,6 +271,7 @@
       "dateLabel": "Date",
       "timeLabel": "Time",
       "consentCta": "Fill in my intake form (Required)",
+      "corporateCta": "Staff Rate",
       "whatsappMessage": "Hello, I just booked {{services}} for {{date}} at {{time}}.",
       "homeCta": "Back to home"
     }

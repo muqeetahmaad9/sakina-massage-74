@@ -195,17 +195,27 @@ export function consentFormEmailHtml({ user, form, booking }) {
   `;
 }
 
-export function corporateFormEmailHtml({ user, form }) {
+export function corporateFormEmailHtml({ user, form, booking }) {
+  const bookingBlock = booking
+    ? `
+      <p><strong>N° facture liée :</strong> ${booking.invoiceNumber}</p>
+      <p><strong>Réservation :</strong> ${new Date(booking.date).toLocaleDateString('fr-FR')} à ${booking.time}</p>
+    `
+    : '';
+
   return `
     <div style="font-family: Georgia, serif; color: #2b2926; max-width: 560px;">
       <h2 style="color: #2b2926;">Nouveau formulaire Tarif Personnel — Sakina Massage 974</h2>
       <p><strong>Client :</strong> ${form.firstName} ${form.lastName} (${user.email}, ${form.phone})</p>
+      ${bookingBlock}
       <p><strong>Date de naissance :</strong> ${form.birthDate}</p>
       <p><strong>Type d'entreprise :</strong> ${form.organizationType || '—'}</p>
       <p><strong>Nom de la société :</strong> ${form.companyName || '—'}</p>
       <p><strong>Tranche d'effectifs :</strong> ${form.employeeCountRange || '—'}</p>
       <p><strong>Nombre exact d'employés :</strong> ${form.employeeCount || '—'}</p>
-      <p style="color: #6b6b6b; font-size: 13px;">Le formulaire est joint à cet email en PDF.</p>
+      <p style="color: #6b6b6b; font-size: 13px;">
+        ${booking ? 'Le formulaire et la facture de la réservation liée sont joints à cet email.' : 'Le formulaire est joint à cet email.'}
+      </p>
     </div>
   `;
 }

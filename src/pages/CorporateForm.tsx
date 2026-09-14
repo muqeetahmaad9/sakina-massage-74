@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { CheckCircle2, LogIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
@@ -20,6 +20,8 @@ const initialForm = {
 export default function CorporateForm() {
   const { t } = useTranslation();
   const { user } = useAuth();
+  const [searchParams] = useSearchParams();
+  const bookingId = searchParams.get('bookingId');
   const [form, setForm] = useState(initialForm);
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [error, setError] = useState('');
@@ -36,7 +38,7 @@ export default function CorporateForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, bookingId }),
       });
       const data = await res.json();
 

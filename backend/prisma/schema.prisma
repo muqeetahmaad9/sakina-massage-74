@@ -46,9 +46,10 @@ model Booking {
   invoiceNumber String   @unique
   createdAt     DateTime @default(now())
 
-  user         User             @relation(fields: [userId], references: [id])
-  services     BookingService[]
-  consentForms ConsentForm[]
+  user           User             @relation(fields: [userId], references: [id])
+  services       BookingService[]
+  consentForms   ConsentForm[]
+  corporateForms CorporateForm[]
 
   @@unique([date, time]) // one booking slot at a time (single practitioner)
 }
@@ -127,6 +128,7 @@ model ConsentForm {
 model CorporateForm {
   id                String   @id @default(cuid())
   userId            String
+  bookingId         String?
   lastName          String
   firstName         String
   birthDate         String
@@ -137,5 +139,6 @@ model CorporateForm {
   employeeCount     String?
   createdAt         DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
+  user    User     @relation(fields: [userId], references: [id])
+  booking Booking? @relation(fields: [bookingId], references: [id])
 }

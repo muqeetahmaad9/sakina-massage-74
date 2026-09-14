@@ -271,6 +271,7 @@
       "dateLabel": "Date",
       "timeLabel": "Heure",
       "consentCta": "Remplir ma fiche (Obligatoire)",
+      "corporateCta": "Tarif Personnel",
       "whatsappMessage": "Bonjour, je viens de réserver {{services}} pour le {{date}} à {{time}}.",
       "homeCta": "Retour Accueil"
     }
