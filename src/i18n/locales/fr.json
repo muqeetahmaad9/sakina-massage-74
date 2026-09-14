@@ -37,17 +37,21 @@
       "bookLink": "Réserver",
       "viewAll": "Voir tous nos soins",
       "items": {
-        "headSpaPremium": {
-          "desc": "Un travail précis sur les tensions crâniennes, la circulation et le système nerveux. Uniquement l'expertise du toucher.",
-          "time": "1 heure"
-        },
-        "roseTherapie": {
-          "desc": "Massage relaxant aux mouvements lents et enveloppants, inspiré des traditions orientales pour une détente profonde.",
+        "headSpaZoneCiblee": {
+          "desc": "Un travail précis sur les tensions crâniennes, la circulation et le système nerveux, complété par un massage sur zone ciblée.",
           "time": "1h30"
         },
-        "deepTissueCupping": {
-          "desc": "Un soin puissant associant pressions profondes et cupping pour soulager les tensions musculaires et relancer la circulation.",
-          "time": "1 heure"
+        "footSpaMassageJambes": {
+          "desc": "Bain relaxant des pieds, gommage, massage des pieds et des jambes pour des jambes légères et apaisées.",
+          "time": "1h30"
+        },
+        "massageAbhyanga": {
+          "desc": "Rituel ayurvédique aux huiles chaudes qui rééquilibre le corps et l'esprit, apaise le mental et procure une sensation de bien-être.",
+          "time": "1h30"
+        },
+        "packBienEtre": {
+          "desc": "Détente crânienne, massage relaxant du corps et massage des jambes, pieds & mains pour un bien-être global.",
+          "time": "1h30"
         }
       }
     },
@@ -98,103 +102,63 @@
     "categoryLabel": "Catégorie",
     "benefitsLabel": "Les bienfaits",
     "idealForLabel": "Idéal pour",
+    "tarifPublic": "Tarif Public",
+    "tarifPersonnel": "Tarif Personnel",
+    "personnelNote": "Tarif personnel réservé aux personnels du secteur public & privé.",
     "bookCta": "Réserver",
     "items": {
-      "massageDuo": {
-        "intro": "Le massage en duo est une expérience de bien-être unique à partager avec une personne chère dans une atmosphère douce, chaleureuse et apaisante. Que ce soit en couple, entre mère et fille, amies, cousines ou proches, ce moment privilégié permet de se détendre ensemble tout en profitant d'un soin relaxant personnalisé.",
+      "headSpaZoneCiblee": {
+        "intro": "Notre Head Spa est différent… parce qu'il ne se contente pas de détendre : un travail précis sur les tensions crâniennes, la circulation, le système nerveux, complété par un massage sur zone ciblée.",
         "details": [
-          "Réalisé simultanément dans le même espace, le massage duo associe des gestes fluides, enveloppants et harmonieux pour relâcher les tensions, réduire le stress et procurer une profonde sensation de détente du corps et de l'esprit. Chaque massage est adapté aux besoins et préférences de chacun afin d'offrir une expérience cocooning et réconfortante.",
-          "Véritable parenthèse de douceur et de complicité, le massage en duo invite au lâcher-prise, au partage et à la reconnexion dans une ambiance propice au calme, à la sérénité et au bien-être absolu."
-        ],
-        "note": "Uniquement le samedi"
-      },
-      "roseTherapieBodyTouch": {
-        "intro": "Laissez-vous envelopper par un rituel inspiré des traditions orientales, conçu pour offrir une profonde détente du corps et de l'esprit.",
-        "details": [
-          "Le Massage Body Touch Oriental est un massage relaxant aux mouvements lents, fluides et enveloppants. Réalisé avec une huile de massage délicatement parfumée, il aide à relâcher les tensions musculaires, apaiser le stress et rétablir l'harmonie intérieure."
+          "Un rituel japonais pour un esprit léger : soin du cuir chevelu, massage crânien relaxant, massage du visage et détente profonde, réalisés uniquement à l'expertise du toucher."
         ],
         "benefits": [
-          "Relâche les tensions musculaires.",
-          "Procure une profonde sensation de détente.",
-          "Favorise une meilleure circulation sanguine.",
-          "Réduit le stress et la fatigue.",
-          "Apaise le corps et l'esprit.",
-          "Offre un véritable moment de lâcher-prise."
+          "Cuir chevelu revitalisé",
+          "Cheveux plus forts et brillants",
+          "Un véritable moment d'évasion",
+          "Détente mentale profonde"
         ],
-        "note": "Un soin idéal pour celles et ceux qui souhaitent s'évader du quotidien et s'accorder une parenthèse de sérénité dans une ambiance chaleureuse aux inspirations orientales."
+        "note": "Réservé aux personnels du secteur public & privé pour le tarif personnel."
       },
-      "massageDrainant": {
-        "intro": "Le massage drainant est une technique douce et tonique qui stimule la circulation lymphatique et sanguine afin d'aider le corps à éliminer les toxines et réduire la rétention d'eau.",
-        "benefits": [
-          "Favorise l'élimination des toxines",
-          "Réduit les gonflements et la rétention d'eau",
-          "Affine et tonifie la silhouette",
-          "Soulage les jambes lourdes",
-          "Active la circulation",
-          "Procure une sensation de légèreté et de bien-être"
-        ],
-        "idealFor": ["Ballonnements", "Fatigue et stress", "Rétention d'eau", "Perte de tonicité", "Sensation de jambes lourdes"]
-      },
-      "headSpaPremium": {
-        "intro": "Notre Head Spa est différent… parce qu'il ne se contente pas de détendre : un travail précis sur les tensions crâniennes, la circulation, le système nerveux. Ici pas de gadgets… pas de soins capillaires. Uniquement l'expertise du toucher. Uniquement des mains formées par de vrais professionnels de massage.",
-        "benefits": ["Détente mentale", "Libérations des tensions", "Stimulation profonde", "Expérience sensorielle complète"]
-      },
-      "headSpaMassageRelaxant": {
-        "intro": "Offrez-vous une expérience de bien-être complète où le soin du cuir chevelu rencontre la détente du corps. Cette formule associe un Head Spa, véritable rituel de relaxation du cuir chevelu, à un massage relaxant du corps pour relâcher les tensions physiques et apaiser l'esprit.",
+      "footSpaMassageJambes": {
+        "intro": "Offrez à vos pieds et à vos jambes un véritable moment d'évasion.",
         "details": [
-          "Le Head Spa comprend un massage du cuir chevelu accompagné de soins adaptés, favorisant la détente, la stimulation de la microcirculation et une sensation de légèreté. Le massage relaxant, réalisé avec des gestes lents et enveloppants, aide à dénouer les tensions musculaires, réduire le stress et procurer un profond sentiment de sérénité."
+          "Des pieds légers pour un corps plus serein : gommage, ponçage et lissage, massage relaxant des pieds et des jambes, et pose de vernis semi-permanent."
         ],
         "benefits": [
-          "Détente profonde du corps et de l'esprit.",
-          "Soulagement des tensions musculaires.",
-          "Apaisement du stress et de la fatigue.",
-          "Stimulation de la circulation au niveau du cuir chevelu.",
-          "Sensation de légèreté et de revitalisation."
+          "Jambes légères et apaisées",
+          "Stimulation de la circulation",
+          "Détente et équilibre",
+          "Peau douce et hydratée"
         ],
-        "note": "Un rituel idéal pour s'offrir une véritable parenthèse de douceur et retrouver un équilibre entre le corps et l'esprit."
+        "note": "Réservé aux personnels du secteur public & privé pour le tarif personnel."
       },
-      "headSpaMassageRelaxantDuo": {
-        "intro": "Partagez un moment de détente à deux avec notre rituel Head Spa & Massage Relaxant en Duo, une expérience bien-être pensée pour se ressourcer ensemble.",
+      "massageAbhyanga": {
+        "intro": "Un massage traditionnel indien aux huiles chaudes, qui rééquilibre le corps et l'esprit, apaise le mental et procure une profonde sensation de bien-être.",
         "details": [
-          "Cette prestation associe un Head Spa, qui apaise le cuir chevelu et procure une profonde relaxation, à un massage relaxant du corps réalisé avec des gestes doux et enveloppants pour relâcher les tensions et favoriser un véritable lâcher-prise."
+          "Un voyage au cœur de l'Inde, réalisé avec des huiles ayurvédiques naturelles dans une approche personnalisée et bienveillante."
         ],
         "benefits": [
-          "Profonde relaxation du corps et de l'esprit.",
-          "Soulagement des tensions musculaires.",
-          "Diminution du stress et de la fatigue.",
-          "Stimulation de la microcirculation du cuir chevelu.",
-          "Sensation de bien-être et de légèreté.",
-          "Un moment privilégié à partager en couple, entre amis ou en famille."
+          "Apaise le stress et l'anxiété",
+          "Nourrit la peau en profondeur",
+          "Rééquilibre l'énergie vitale (Doshas)",
+          "Détend les tensions musculaires",
+          "Procure une sensation de bien-être global"
         ],
-        "note": "Offrez-vous une parenthèse de douceur et de sérénité à deux, dans une ambiance chaleureuse et apaisante."
+        "note": "Réservé aux personnels du secteur public & privé pour le tarif personnel."
       },
-      "bonCadeauMassageRelaxant": {
-        "intro": "Offrez un véritable moment de détente avec le bon cadeau massage relaxant 🎁",
+      "packBienEtre": {
+        "intro": "Un moment rien que pour vous : prendre soin de vous au quotidien avec un soin complet du corps et de l'esprit.",
         "details": [
-          "Une parenthèse de bien-être idéale pour faire plaisir à une personne chère et lui permettre de profiter d'un instant de relaxation profonde. Grâce à des gestes doux, fluides et enveloppants, le massage relaxant aide à relâcher les tensions, diminuer le stress et apaiser le corps comme l'esprit.",
-          "Ce bon cadeau est parfait pour toutes les occasions : anniversaire, fête, remerciement ou simplement pour offrir un moment de douceur et d'évasion. Une attention délicate qui invite au lâcher-prise, à la sérénité et au bien-être total."
-        ]
-      },
-      "deepTissueCupping": {
-        "intro": "Le massage Deep Tissue associé au Cupping est un soin puissant et ciblé conçu pour soulager les tensions musculaires profondes, améliorer la récupération du corps et rétablir une sensation de légèreté et de vitalité.",
-        "details": [
-          "Le massage Deep Tissue agit en profondeur sur les muscles, les fascias et les zones de tension chronique grâce à des pressions lentes, précises et soutenues. Il aide à relâcher les nœuds musculaires, améliorer la mobilité et réduire les douleurs liées au stress, aux efforts physiques ou aux mauvaises postures.",
-          "Le Cupping, réalisé à l'aide de ventouses, vient compléter le soin en stimulant la circulation sanguine et lymphatique, favorisant l'élimination des toxines et aidant à détendre les tissus musculaires en profondeur. Cette technique procure une sensation de décontraction intense et favorise une récupération optimale.",
-          "L'association du Deep Tissue et du Cupping offre un véritable rééquilibrage du corps, idéal pour les personnes sujettes aux tensions musculaires, à la fatigue physique ou au stress accumulé. Un soin profond pour retrouver souplesse, énergie et bien-être durable."
-        ]
-      },
-      "footSpa": {
-        "intro": "Offrez à vos pieds un véritable moment d'évasion.",
-        "details": [
-          "Le Foot Spa est un rituel de bien-être complet qui associe un bain relaxant des pieds, des soins exfoliants et nourrissants, ainsi qu'un massage apaisant pour délasser les pieds et favoriser une profonde sensation de légèreté."
+          "Détente crânienne, dénouement des cervicales & massage dorsal, massage relaxant du corps, puis massage des jambes, pieds & mains."
         ],
         "benefits": [
-          "Soulager les pieds fatigués et les tensions accumulées.",
-          "Stimuler la circulation sanguine.",
-          "Adoucir et hydrater la peau.",
-          "Procurer une sensation de détente profonde et de bien-être général."
+          "Détente profonde",
+          "Soulage les tensions",
+          "Bien-être global",
+          "Huiles naturelles et bienfaisantes"
         ],
-        "note": "Idéal après une longue journée debout, une activité physique ou simplement pour s'accorder une parenthèse de relaxation, le Foot Spa redonne confort, douceur et légèreté à vos pieds tout en offrant un véritable moment de lâcher-prise."
+        "note": "Réservé aux personnels du secteur public & privé pour le tarif personnel."
       }
     }
   },

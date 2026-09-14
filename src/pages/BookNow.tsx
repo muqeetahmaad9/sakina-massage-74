@@ -15,13 +15,10 @@ interface Service {
 }
 
 const categoryOrder = [
-  'Bundle Pack',
-  'Massages By Anissah',
-  "Les Cures d'Anissah",
-  "Les Formules Head Spa d'Anissah",
-  "Bon Cadeau d'Anissah",
-  'Ventousothérapie / Cupping Therapy By Anissah',
+  'Head Spa',
   'Foot Spa',
+  'Massage Abhyanga',
+  'Pack Bien-Être',
 ];
 
 // Real opening hours: Monday–Saturday 07:00–21:00, Sunday 08:00–17:00.

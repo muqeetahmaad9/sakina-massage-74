@@ -37,17 +37,21 @@
       "bookLink": "Book",
       "viewAll": "See all our treatments",
       "items": {
-        "headSpaPremium": {
-          "desc": "Precise work on cranial tension, circulation and the nervous system. Just the expertise of touch.",
-          "time": "1 hour"
-        },
-        "roseTherapie": {
-          "desc": "A relaxing massage with slow, enveloping movements, inspired by Eastern traditions for deep relaxation.",
+        "headSpaZoneCiblee": {
+          "desc": "Precise work on cranial tension, circulation and the nervous system, completed by a targeted-area massage.",
           "time": "1h30"
         },
-        "deepTissueCupping": {
-          "desc": "A powerful treatment combining deep pressure and cupping to relieve muscle tension and boost circulation.",
-          "time": "1 hour"
+        "footSpaMassageJambes": {
+          "desc": "Relaxing foot bath, exfoliation, foot and leg massage for light, soothed legs.",
+          "time": "1h30"
+        },
+        "massageAbhyanga": {
+          "desc": "Ayurvedic ritual with warm oils that rebalances body and mind, soothes the mind and provides a sense of wellbeing.",
+          "time": "1h30"
+        },
+        "packBienEtre": {
+          "desc": "Cranial relaxation, relaxing body massage and leg, foot & hand massage for overall wellbeing.",
+          "time": "1h30"
         }
       }
     },
@@ -98,103 +102,63 @@
     "categoryLabel": "Category",
     "benefitsLabel": "Benefits",
     "idealForLabel": "Ideal for",
+    "tarifPublic": "Public Rate",
+    "tarifPersonnel": "Staff Rate",
+    "personnelNote": "Staff rate reserved for public and private sector employees.",
     "bookCta": "Book",
     "items": {
-      "massageDuo": {
-        "intro": "The duo massage is a unique wellness experience to share with a loved one in a soft, warm and soothing atmosphere. Whether as a couple, mother and daughter, friends, cousins or close family, this special moment lets you relax together while enjoying a personalized, soothing treatment.",
+      "headSpaZoneCiblee": {
+        "intro": "Our Head Spa is different… because it doesn't just relax: it's precise work on cranial tension, circulation, the nervous system, completed by a targeted-area massage.",
         "details": [
-          "Performed simultaneously in the same space, the duo massage combines fluid, enveloping and harmonious movements to release tension, reduce stress and provide a deep sense of relaxation for body and mind. Each massage is adapted to each person's needs and preferences to offer a cocooning and comforting experience.",
-          "A true parenthesis of gentleness and closeness, the duo massage invites you to let go, share and reconnect in an atmosphere conducive to calm, serenity and absolute wellness."
-        ],
-        "note": "Saturdays only"
-      },
-      "roseTherapieBodyTouch": {
-        "intro": "Let yourself be enveloped by a ritual inspired by Eastern traditions, designed to offer deep relaxation of body and mind.",
-        "details": [
-          "The Body Touch Oriental Massage is a relaxing massage with slow, fluid, enveloping movements. Performed with a delicately scented massage oil, it helps release muscle tension, ease stress and restore inner harmony."
+          "A Japanese ritual for a lighter mind: scalp care, relaxing cranial massage, facial massage and deep relaxation, achieved solely through the expertise of touch."
         ],
         "benefits": [
-          "Releases muscle tension.",
-          "Provides a deep sense of relaxation.",
-          "Promotes better blood circulation.",
-          "Reduces stress and fatigue.",
-          "Soothes body and mind.",
-          "Offers a true moment of letting go."
+          "Revitalized scalp",
+          "Stronger, shinier hair",
+          "A true moment of escape",
+          "Deep mental relaxation"
         ],
-        "note": "An ideal treatment for those who want to escape the everyday and enjoy a moment of serenity in a warm atmosphere with Eastern-inspired touches."
+        "note": "Staff rate reserved for public and private sector employees."
       },
-      "massageDrainant": {
-        "intro": "The draining massage is a gentle, toning technique that stimulates lymphatic and blood circulation to help the body eliminate toxins and reduce water retention.",
-        "benefits": [
-          "Promotes the elimination of toxins",
-          "Reduces swelling and water retention",
-          "Refines and tones the silhouette",
-          "Relieves heavy legs",
-          "Boosts circulation",
-          "Provides a feeling of lightness and wellbeing"
-        ],
-        "idealFor": ["Bloating", "Fatigue and stress", "Water retention", "Loss of firmness", "Heavy-leg sensation"]
-      },
-      "headSpaPremium": {
-        "intro": "Our Head Spa is different… because it doesn't just relax: it's precise work on cranial tension, circulation, the nervous system. No gadgets here… no hair care. Just the expertise of touch. Just hands trained by real massage professionals.",
-        "benefits": ["Mental relaxation", "Tension release", "Deep stimulation", "A complete sensory experience"]
-      },
-      "headSpaMassageRelaxant": {
-        "intro": "Treat yourself to a complete wellness experience where scalp care meets body relaxation. This formula combines a Head Spa — a true scalp relaxation ritual — with a relaxing body massage to release physical tension and soothe the mind.",
+      "footSpaMassageJambes": {
+        "intro": "Give your feet and legs a true moment of escape.",
         "details": [
-          "The Head Spa includes a scalp massage with tailored treatments, promoting relaxation, stimulating microcirculation and creating a feeling of lightness. The relaxing massage, performed with slow, enveloping movements, helps release muscle tension, reduce stress and bring a deep sense of serenity."
+          "Light feet for a more serene body: exfoliation, buffing and smoothing, relaxing foot and leg massage, and semi-permanent polish application."
         ],
         "benefits": [
-          "Deep relaxation of body and mind.",
-          "Relief of muscle tension.",
-          "Easing of stress and fatigue.",
-          "Stimulation of scalp circulation.",
-          "A feeling of lightness and revitalization."
+          "Light, soothed legs",
+          "Improved circulation",
+          "Relaxation and balance",
+          "Soft, hydrated skin"
         ],
-        "note": "An ideal ritual to enjoy a true moment of gentleness and restore balance between body and mind."
+        "note": "Staff rate reserved for public and private sector employees."
       },
-      "headSpaMassageRelaxantDuo": {
-        "intro": "Share a relaxing moment together with our Head Spa & Duo Relaxing Massage ritual, a wellness experience designed to recharge together.",
+      "massageAbhyanga": {
+        "intro": "A traditional Indian massage with warm oils that rebalances body and mind, soothes the mind and provides a deep sense of wellbeing.",
         "details": [
-          "This treatment combines a Head Spa, which soothes the scalp and provides deep relaxation, with a relaxing body massage performed with gentle, enveloping movements to release tension and encourage true letting go."
+          "A journey to the heart of India, performed with natural Ayurvedic oils in a personalized and caring approach."
         ],
         "benefits": [
-          "Deep relaxation of body and mind.",
-          "Relief of muscle tension.",
-          "Reduced stress and fatigue.",
-          "Stimulation of scalp microcirculation.",
-          "A feeling of wellbeing and lightness.",
-          "A special moment to share as a couple, with friends or family."
+          "Eases stress and anxiety",
+          "Deeply nourishes the skin",
+          "Rebalances vital energy (Doshas)",
+          "Relieves muscle tension",
+          "Provides a feeling of overall wellbeing"
         ],
-        "note": "Treat yourselves to a shared moment of gentleness and serenity, in a warm and soothing atmosphere."
+        "note": "Staff rate reserved for public and private sector employees."
       },
-      "bonCadeauMassageRelaxant": {
-        "intro": "Give a genuine moment of relaxation with the relaxing massage gift voucher 🎁",
+      "packBienEtre": {
+        "intro": "A moment just for you: taking care of yourself every day with a complete treatment for body and mind.",
         "details": [
-          "An ideal wellness gift to treat a loved one and let them enjoy a moment of deep relaxation. Through gentle, fluid and enveloping movements, the relaxing massage helps release tension, reduce stress and soothe both body and mind.",
-          "This gift voucher is perfect for any occasion: birthdays, celebrations, thank-yous, or simply to offer a moment of gentleness and escape. A thoughtful gift that invites letting go, serenity and total wellbeing."
-        ]
-      },
-      "deepTissueCupping": {
-        "intro": "The Deep Tissue massage combined with Cupping is a powerful, targeted treatment designed to relieve deep muscle tension, improve the body's recovery and restore a feeling of lightness and vitality.",
-        "details": [
-          "The Deep Tissue massage works deeply on muscles, fascia and chronic tension areas through slow, precise and sustained pressure. It helps release muscle knots, improve mobility and reduce pain linked to stress, physical exertion or poor posture.",
-          "Cupping, performed with suction cups, complements the treatment by stimulating blood and lymphatic circulation, promoting the elimination of toxins and helping deeply relax the muscle tissue. This technique provides an intense feeling of release and supports optimal recovery.",
-          "The combination of Deep Tissue and Cupping offers true rebalancing for the body, ideal for those prone to muscle tension, physical fatigue or accumulated stress. A deep treatment to regain flexibility, energy and lasting wellbeing."
-        ]
-      },
-      "footSpa": {
-        "intro": "Give your feet a true moment of escape.",
-        "details": [
-          "The Foot Spa is a complete wellness ritual that combines a relaxing foot bath, exfoliating and nourishing care, and a soothing massage to relax the feet and provide a deep feeling of lightness."
+          "Cranial relaxation, neck release & back massage, relaxing body massage, then leg, foot & hand massage."
         ],
         "benefits": [
-          "Relieves tired feet and built-up tension.",
-          "Stimulates blood circulation.",
-          "Softens and hydrates the skin.",
-          "Provides a feeling of deep relaxation and overall wellbeing."
+          "Deep relaxation",
+          "Relieves tension",
+          "Overall wellbeing",
+          "Natural, nourishing oils"
         ],
-        "note": "Ideal after a long day on your feet, physical activity, or simply to treat yourself to a moment of relaxation, the Foot Spa restores comfort, softness and lightness to your feet while offering a true moment of letting go."
+        "note": "Staff rate reserved for public and private sector employees."
       }
     }
   },

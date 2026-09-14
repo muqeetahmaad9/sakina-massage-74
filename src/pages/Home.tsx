@@ -7,24 +7,31 @@ const reviewKeys = ['review1', 'review2', 'review3', 'review4', 'review5', 'revi
 
 const services = [
   {
-    key: 'headSpaPremium',
-    title: 'Head Spa Premium',
+    key: 'headSpaZoneCiblee',
+    title: 'Head Spa + Massage Sur Zone Ciblée',
     price: '100 €',
-    image: '/images/flyers/headspa-japonais-flyer.jpg',
+    image: '/images/flyers/headspa-footspa-combo-flyer.jpg',
     isFlyerImage: true
   },
   {
-    key: 'roseTherapie',
-    title: 'La Rose Thérapie & Body Touch Oriental',
-    price: '150 €',
-    image: '/images/flyers/rose-therapie-flyer.jpg',
+    key: 'footSpaMassageJambes',
+    title: 'Foot Spa + Massage Des Jambes',
+    price: '100 €',
+    image: '/images/flyers/footspa-flyer.jpg',
     isFlyerImage: true
   },
   {
-    key: 'deepTissueCupping',
-    title: 'Massage Deep Tissue + Ventouse',
-    price: '110 €',
-    image: '/images/flyers/massage-relaxant-cupping-flyer.jpg',
+    key: 'massageAbhyanga',
+    title: 'Massage Abhyanga',
+    price: '95 €',
+    image: '/images/flyers/massage-abhyanga-flyer.jpg',
+    isFlyerImage: true
+  },
+  {
+    key: 'packBienEtre',
+    title: 'Pack Bien-Être',
+    price: '100 €',
+    image: '/images/flyers/pack-bien-etre-flyer.jpg',
     isFlyerImage: true
   }
 ];
@@ -145,7 +152,7 @@ export default function Home() {
             <h3 className="text-4xl md:text-5xl font-serif text-charcoal">{t('home.services.title')}</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}

@@ -2,29 +2,16 @@
 // Run with: node seed.js
 import { prisma } from './db.js';
 
+// Prices store the "Tarif Public" amount; the "Tarif Personnel" (public/private sector staff) price
+// is shown alongside it on the Services page — see PERSONNEL_PRICES in src/pages/Services.tsx.
 const services = [
-  // Bundle pack listed first so it always appears at the top of Services/BookNow.
-  { category: 'Bundle Pack', name: 'Massage Drainant - 4 Séances', duration: '4 x 1 heure', price: 200 },
-  { category: 'Massages By Anissah', name: 'Massage Duo - Résa Uniquement Le Samedi', duration: '1 heure', price: 120 },
-  { category: 'Massages By Anissah', name: 'La Rose Thérapie & Massage Body Touch Oriental', duration: '1h30', price: 150 },
-  { category: "Les Cures d'Anissah", name: 'Massage Drainant', duration: '1 heure', price: 75 },
-  { category: "Les Formules Head Spa d'Anissah", name: 'Head Spa Premium', duration: '1 heure', price: 100 },
-  { category: "Les Formules Head Spa d'Anissah", name: 'Head Spa + Massage Relaxant', duration: '1 heure', price: 100 },
-  { category: "Les Formules Head Spa d'Anissah", name: 'Head Spa + Massage Relaxant En Duo', duration: '1h30', price: 150 },
-  { category: "Bon Cadeau d'Anissah", name: 'Bon Cadeau - Massage Relaxant', duration: '1 heure', price: 60 },
-  { category: 'Ventousothérapie / Cupping Therapy By Anissah', name: 'Massage Deep Tissue + Ventouse', duration: '1 heure', price: 110 },
-  { category: 'Foot Spa', name: 'Foot Spa', duration: '1 heure', price: 100 },
+  { category: 'Head Spa', name: 'Head Spa + Massage Sur Zone Ciblée', duration: '1h30', price: 100 },
+  { category: 'Foot Spa', name: 'Foot Spa + Massage Des Jambes', duration: '1h30', price: 100 },
+  { category: 'Massage Abhyanga', name: 'Massage Abhyanga - Rituel Ayurvédique', duration: '1h30', price: 95 },
+  { category: 'Pack Bien-Être', name: 'Pack Bien-Être', duration: '1h30', price: 100 },
 ];
 
-const products = [
-  {
-    name: 'Massage Drainant',
-    price: 200,
-    applicableServices: 'Massage Drainant',
-    appointments: 4,
-    validity: 'Sans expiration',
-  },
-];
+const products = [];
 
 async function main() {
   for (const s of services) {
@@ -53,6 +40,20 @@ async function main() {
     } else {
       console.log(`Skipped (already exists): ${p.name}`);
     }
+  }
+
+  // Remove services that are no longer in the catalog (retired offerings).
+  // Services with existing bookings are kept (FK constraint) and just logged.
+  const currentNames = services.map((s) => s.name);
+  const stale = await prisma.service.findMany({ where: { name: { notIn: currentNames } } });
+  for (const s of stale) {
+    const bookingCount = await prisma.bookingService.count({ where: { serviceId: s.id } });
+    if (bookingCount > 0) {
+      console.log(`Kept retired service (has ${bookingCount} booking(s)): ${s.name}`);
+      continue;
+    }
+    await prisma.service.delete({ where: { id: s.id } });
+    console.log(`Deleted retired service: ${s.name}`);
   }
 }
 
