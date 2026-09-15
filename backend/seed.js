@@ -9,6 +9,7 @@ const services = [
   { category: 'Foot Spa', name: 'Foot Spa + Massage Des Jambes', duration: '1h30', price: 100 },
   { category: 'Massage Abhyanga', name: 'Massage Abhyanga - Rituel Ayurvédique', duration: '1h30', price: 95 },
   { category: 'Pack Bien-Être', name: 'Pack Bien-Être', duration: '1h30', price: 100 },
+  { category: 'Bon Cadeau', name: 'Bon Cadeau', duration: '1h30', price: 55 },
 ];
 
 const products = [];

@@ -102,6 +102,7 @@
     "categoryLabel": "Category",
     "benefitsLabel": "Benefits",
     "idealForLabel": "Ideal for",
+    "tarif": "Rate",
     "tarifPublic": "Public Rate",
     "tarifPersonnel": "Staff Rate",
     "personnelNote": "Staff rate reserved for public and private sector employees.",
@@ -159,6 +160,12 @@
           "Natural, nourishing oils"
         ],
         "note": "Staff rate reserved for public and private sector employees."
+      },
+      "bonCadeau": {
+        "intro": "A wellness moment just for you: massages, Head Spa, Foot Spa and wellness treatments. Because taking care of yourself is essential.",
+        "details": [
+          "Give more than a treatment, give a moment of happiness. The Gift Voucher lets you choose from any of our services for a custom-tailored moment of relaxation."
+        ]
       }
     }
   },
@@ -270,6 +277,7 @@
       "detailsTitle": "Your treatment details",
       "dateLabel": "Date",
       "timeLabel": "Time",
+      "payCta": "Pay for my booking",
       "consentCta": "Fill in my intake form (Required)",
       "corporateCta": "Staff Rate",
       "whatsappMessage": "Hello, I just booked {{services}} for {{date}} at {{time}}.",

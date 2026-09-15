@@ -102,6 +102,7 @@
     "categoryLabel": "Catégorie",
     "benefitsLabel": "Les bienfaits",
     "idealForLabel": "Idéal pour",
+    "tarif": "Tarif",
     "tarifPublic": "Tarif Public",
     "tarifPersonnel": "Tarif Personnel",
     "personnelNote": "Tarif personnel réservé aux personnels du secteur public & privé.",
@@ -159,6 +160,12 @@
           "Huiles naturelles et bienfaisantes"
         ],
         "note": "Réservé aux personnels du secteur public & privé pour le tarif personnel."
+      },
+      "bonCadeau": {
+        "intro": "Un moment de bien-être rien que pour vous : massages, Head Spa, Foot Spa et soins bien-être. Parce que prendre soin de soi est essentiel.",
+        "details": [
+          "Offrez plus qu'un soin, offrez un moment de bonheur. Le Bon Cadeau permet de choisir parmi l'ensemble de nos prestations pour un moment de détente sur-mesure."
+        ]
       }
     }
   },
@@ -270,6 +277,7 @@
       "detailsTitle": "Détails de votre soin",
       "dateLabel": "Date",
       "timeLabel": "Heure",
+      "payCta": "Payer ma réservation",
       "consentCta": "Remplir ma fiche (Obligatoire)",
       "corporateCta": "Tarif Personnel",
       "whatsappMessage": "Bonjour, je viens de réserver {{services}} pour le {{date}} à {{time}}.",

@@ -36,7 +36,7 @@ const categories: Category[] = [
         duration: '1h30',
         price: '100 €',
         personnelPrice: '55 €',
-        image: '/images/flyers/headspa-footspa-combo-flyer.jpg',
+        image: '/images/flyers/headspa-flyer.jpg',
         isFlyerImage: true,
         hasDetails: true,
         hasBenefits: true,
@@ -95,6 +95,21 @@ const categories: Category[] = [
         hasDetails: true,
         hasBenefits: true,
         hasNote: true,
+      },
+    ],
+  },
+  {
+    key: 'bonCadeau',
+    title: 'Bon Cadeau',
+    services: [
+      {
+        key: 'bonCadeau',
+        name: 'Bon Cadeau',
+        duration: '1h30',
+        price: '55 €',
+        personnelPrice: '55 €',
+        image: '/images/flyers/bon-cadeau-flyer.jpg',
+        hasDetails: true,
       },
     ],
   },
@@ -167,18 +182,27 @@ export default function Services() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-6 mb-6 bg-cream/60 rounded-xl px-5 py-3 w-fit">
-                        <div>
-                          <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarifPublic')}</div>
+                      {service.price === service.personnelPrice ? (
+                        <div className="mb-6 bg-cream/60 rounded-xl px-5 py-3 w-fit">
+                          <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarif')}</div>
                           <div className="text-lg font-medium text-olive">{service.price}</div>
                         </div>
-                        <div className="w-px h-8 bg-gray-200" />
-                        <div>
-                          <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarifPersonnel')}</div>
-                          <div className="text-lg font-medium text-olive">{service.personnelPrice}</div>
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-500 italic font-light mb-6 -mt-3">{t('services.personnelNote')}</p>
+                      ) : (
+                        <>
+                          <div className="flex items-center gap-6 mb-6 bg-cream/60 rounded-xl px-5 py-3 w-fit">
+                            <div>
+                              <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarifPublic')}</div>
+                              <div className="text-lg font-medium text-olive">{service.price}</div>
+                            </div>
+                            <div className="w-px h-8 bg-gray-200" />
+                            <div>
+                              <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarifPersonnel')}</div>
+                              <div className="text-lg font-medium text-olive">{service.personnelPrice}</div>
+                            </div>
+                          </div>
+                          <p className="text-xs text-gray-500 italic font-light mb-6 -mt-3">{t('services.personnelNote')}</p>
+                        </>
+                      )}
 
                       <p className="text-gray-600 font-light leading-relaxed mb-4">{t(`${base}.intro`)}</p>
 

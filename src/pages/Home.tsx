@@ -10,7 +10,7 @@ const services = [
     key: 'headSpaZoneCiblee',
     title: 'Head Spa + Massage Sur Zone Ciblée',
     price: '100 €',
-    image: '/images/flyers/headspa-footspa-combo-flyer.jpg',
+    image: '/images/flyers/headspa-flyer.jpg',
     isFlyerImage: true
   },
   {

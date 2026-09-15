@@ -19,6 +19,7 @@ const categoryOrder = [
   'Foot Spa',
   'Massage Abhyanga',
   'Pack Bien-Être',
+  'Bon Cadeau',
 ];
 
 // Real opening hours: Monday–Saturday 07:00–21:00, Sunday 08:00–17:00.
@@ -445,6 +446,14 @@ export default function BookNow() {
                 </div>
 
                 <div className="flex flex-col gap-4 max-w-sm mx-auto">
+                  <a
+                    href="https://pay.sumup.com/b2c/QQDSVV22"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gold text-charcoal px-8 py-4 rounded-xl text-sm font-semibold tracking-widest uppercase hover:bg-gold/90 transition-colors w-full text-center"
+                  >
+                    {t('booknow.step5.payCta')}
+                  </a>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <button
                       onClick={() => (window.location.href = `/consent?bookingId=${confirmedBooking.id}`)}
