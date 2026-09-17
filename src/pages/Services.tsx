@@ -103,7 +103,6 @@ const categories: Category[] = [
         duration: '1h30',
         price: '55 €',
         image: '/images/flyers/bon-cadeau-flyer.jpg',
-        isPortraitCropped: true,
         hasDetails: true,
       },
     ],
