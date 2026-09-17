@@ -7,10 +7,7 @@ interface Service {
   key: string;
   name: string;
   duration: string;
-  /** "Tarif Public" price, shown as the main price. */
   price: string;
-  /** "Tarif Personnel" price — discounted rate for public/private sector staff. */
-  personnelPrice: string;
   image: string;
   /** True for tall poster-style flyer images that should be shown whole (letterboxed), not cropped. */
   isFlyerImage?: boolean;
@@ -36,8 +33,7 @@ const categories: Category[] = [
         key: 'headSpaZoneCiblee',
         name: 'Head Spa + Massage Sur Zone Ciblée',
         duration: '1h30',
-        price: '100 €',
-        personnelPrice: '55 €',
+        price: '55 €',
         image: '/images/flyers/headspa-flyer.jpg',
         isFlyerImage: true,
         hasDetails: true,
@@ -54,8 +50,7 @@ const categories: Category[] = [
         key: 'footSpaMassageJambes',
         name: 'Foot Spa + Massage Des Jambes',
         duration: '1h30',
-        price: '100 €',
-        personnelPrice: '55 €',
+        price: '55 €',
         image: '/images/flyers/footspa-flyer.jpg',
         isFlyerImage: true,
         hasDetails: true,
@@ -72,8 +67,7 @@ const categories: Category[] = [
         key: 'massageAbhyanga',
         name: 'Massage Abhyanga - Rituel Ayurvédique',
         duration: '1h30',
-        price: '95 €',
-        personnelPrice: '55 €',
+        price: '55 €',
         image: '/images/flyers/massage-abhyanga-flyer.jpg',
         isFlyerImage: true,
         hasDetails: true,
@@ -90,8 +84,7 @@ const categories: Category[] = [
         key: 'packBienEtre',
         name: 'Pack Bien-Être',
         duration: '1h30',
-        price: '100 €',
-        personnelPrice: '55 €',
+        price: '55 €',
         image: '/images/flyers/pack-bien-etre-flyer.jpg',
         isFlyerImage: true,
         hasDetails: true,
@@ -109,7 +102,6 @@ const categories: Category[] = [
         name: 'Bon Cadeau',
         duration: '1h30',
         price: '55 €',
-        personnelPrice: '55 €',
         image: '/images/flyers/bon-cadeau-flyer.jpg',
         isPortraitCropped: true,
         hasDetails: true,
@@ -185,27 +177,10 @@ export default function Services() {
                         </div>
                       </div>
 
-                      {service.price === service.personnelPrice ? (
-                        <div className="mb-6 bg-cream/60 rounded-xl px-5 py-3 w-fit">
-                          <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarif')}</div>
-                          <div className="text-lg font-medium text-olive">{service.price}</div>
-                        </div>
-                      ) : (
-                        <>
-                          <div className="flex items-center gap-6 mb-6 bg-cream/60 rounded-xl px-5 py-3 w-fit">
-                            <div>
-                              <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarifPublic')}</div>
-                              <div className="text-lg font-medium text-olive">{service.price}</div>
-                            </div>
-                            <div className="w-px h-8 bg-gray-200" />
-                            <div>
-                              <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarifPersonnel')}</div>
-                              <div className="text-lg font-medium text-olive">{service.personnelPrice}</div>
-                            </div>
-                          </div>
-                          <p className="text-xs text-gray-500 italic font-light mb-6 -mt-3">{t('services.personnelNote')}</p>
-                        </>
-                      )}
+                      <div className="mb-6 bg-cream/60 rounded-xl px-5 py-3 w-fit">
+                        <div className="text-xs uppercase tracking-widest text-gray-500">{t('services.tarif')}</div>
+                        <div className="text-lg font-medium text-olive">{service.price}</div>
+                      </div>
 
                       <p className="text-gray-600 font-light leading-relaxed mb-4">{t(`${base}.intro`)}</p>
 

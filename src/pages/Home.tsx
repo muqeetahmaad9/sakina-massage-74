@@ -9,28 +9,28 @@ const services = [
   {
     key: 'headSpaZoneCiblee',
     title: 'Head Spa + Massage Sur Zone Ciblée',
-    price: '100 €',
+    price: '55 €',
     image: '/images/flyers/headspa-flyer.jpg',
     isFlyerImage: true
   },
   {
     key: 'footSpaMassageJambes',
     title: 'Foot Spa + Massage Des Jambes',
-    price: '100 €',
+    price: '55 €',
     image: '/images/flyers/footspa-flyer.jpg',
     isFlyerImage: true
   },
   {
     key: 'massageAbhyanga',
     title: 'Massage Abhyanga',
-    price: '95 €',
+    price: '55 €',
     image: '/images/flyers/massage-abhyanga-flyer.jpg',
     isFlyerImage: true
   },
   {
     key: 'packBienEtre',
     title: 'Pack Bien-Être',
-    price: '100 €',
+    price: '55 €',
     image: '/images/flyers/pack-bien-etre-flyer.jpg',
     isFlyerImage: true
   }

@@ -2,13 +2,12 @@
 // Run with: node seed.js
 import { prisma } from './db.js';
 
-// Prices store the "Tarif Public" amount; the "Tarif Personnel" (public/private sector staff) price
-// is shown alongside it on the Services page — see PERSONNEL_PRICES in src/pages/Services.tsx.
+// Every service is a flat 55€ (employee wellness program rate).
 const services = [
-  { category: 'Head Spa', name: 'Head Spa + Massage Sur Zone Ciblée', duration: '1h30', price: 100 },
-  { category: 'Foot Spa', name: 'Foot Spa + Massage Des Jambes', duration: '1h30', price: 100 },
-  { category: 'Massage Abhyanga', name: 'Massage Abhyanga - Rituel Ayurvédique', duration: '1h30', price: 95 },
-  { category: 'Pack Bien-Être', name: 'Pack Bien-Être', duration: '1h30', price: 100 },
+  { category: 'Head Spa', name: 'Head Spa + Massage Sur Zone Ciblée', duration: '1h30', price: 55 },
+  { category: 'Foot Spa', name: 'Foot Spa + Massage Des Jambes', duration: '1h30', price: 55 },
+  { category: 'Massage Abhyanga', name: 'Massage Abhyanga - Rituel Ayurvédique', duration: '1h30', price: 55 },
+  { category: 'Pack Bien-Être', name: 'Pack Bien-Être', duration: '1h30', price: 55 },
   { category: 'Bon Cadeau', name: 'Bon Cadeau', duration: '1h30', price: 55 },
 ];
 
