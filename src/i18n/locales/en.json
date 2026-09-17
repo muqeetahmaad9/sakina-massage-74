@@ -384,7 +384,7 @@
     },
     "success": {
       "title": "Form Sent",
-      "text": "Thank you for completing your staff-rate form. We'll verify your eligibility for the rate reserved for public and private sector staff.",
+      "text": "Thank you for completing your intake form. This information will help us personalize your treatment safely and verify your eligibility for the staff rate.",
       "homeCta": "Back to home"
     },
     "loginRequired": {
@@ -392,11 +392,15 @@
       "text": "You must be logged in to fill in this form."
     },
     "signup": "Sign up",
-    "practitionerTitle": "Staff Rate Form",
-    "intro": "This rate is reserved for public and private sector staff. Please complete this form to verify your eligibility.",
+    "practitionerTitle": "Information Form",
+    "intro": "Please complete this required form before your session: it helps us personalize your treatment and verify your eligibility for the staff rate reserved for public and private sector employees.",
     "sections": {
       "personalInfo": "Personal Information",
-      "companyInfo": "Company Information"
+      "companyInfo": "Company Information",
+      "massageGoals": "Massage Goals",
+      "healthStatus": "Health Status",
+      "habitsWellbeing": "Habits & Wellbeing",
+      "consent": "Consent"
     },
     "fields": {
       "lastName": "Last name",
@@ -408,7 +412,20 @@
       "companyNamePlaceholder": "E.g.: Saint-Paul City Hall, Clinic...",
       "employeeCountRange": "Employee count range",
       "employeeCount": "Exact employee count",
-      "employeeCountPlaceholder": "E.g.: 42"
+      "employeeCountPlaceholder": "E.g.: 42",
+      "expectations": "What do you expect from this session?",
+      "expectationsPlaceholder": "E.g.: Relaxation, pain relief...",
+      "areasToTreat": "Specific areas to focus on or avoid:",
+      "areasToTreatPlaceholder": "E.g.: Focus on the back, avoid the head...",
+      "medicalConditions": "Do you have any medical conditions?",
+      "medications": "Are you currently taking any medication?",
+      "allergies": "Do you have any allergies?",
+      "pregnancy": "Are you pregnant or have you recently given birth?",
+      "regularActivity": "Do you practice regular physical activity?",
+      "hadProfessionalMassage": "Have you ever had a professional massage?",
+      "stressLevel": "Do you frequently feel stress or anxiety?",
+      "signature": "Signature (Enter your full name):",
+      "signaturePlaceholder": "Electronic signature"
     },
     "options": {
       "publique": "Public",
@@ -416,8 +433,12 @@
       "range1": "1–10",
       "range2": "11–50",
       "range3": "51–250",
-      "range4": "250+"
+      "range4": "250+",
+      "yes": "Yes",
+      "no": "No",
+      "sometimes": "Sometimes"
     },
+    "attestation": "I confirm that the information provided is accurate and I accept the massage under my own responsibility. I understand that this treatment is a wellness and relaxation massage, not therapeutic and not medical.",
     "sending": "Sending...",
     "submitCta": "Submit my form"
   },

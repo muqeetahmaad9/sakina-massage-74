@@ -205,7 +205,7 @@ export function corporateFormEmailHtml({ user, form, booking }) {
 
   return `
     <div style="font-family: Georgia, serif; color: #2b2926; max-width: 560px;">
-      <h2 style="color: #2b2926;">Nouveau formulaire Tarif Personnel — Sakina Massage 974</h2>
+      <h2 style="color: #2b2926;">Nouvelle fiche de renseignements — Sakina Massage 974</h2>
       <p><strong>Client :</strong> ${form.firstName} ${form.lastName} (${user.email}, ${form.phone})</p>
       ${bookingBlock}
       <p><strong>Date de naissance :</strong> ${form.birthDate}</p>
@@ -213,6 +213,16 @@ export function corporateFormEmailHtml({ user, form, booking }) {
       <p><strong>Nom de la société :</strong> ${form.companyName || '—'}</p>
       <p><strong>Tranche d'effectifs :</strong> ${form.employeeCountRange || '—'}</p>
       <p><strong>Nombre exact d'employés :</strong> ${form.employeeCount || '—'}</p>
+      <p><strong>Attentes :</strong> ${form.expectations || '—'}</p>
+      <p><strong>Zones à traiter/éviter :</strong> ${form.areasToTreat || '—'}</p>
+      <p><strong>Problèmes médicaux :</strong> ${form.medicalConditions || '—'}</p>
+      <p><strong>Médicaments :</strong> ${form.medications || '—'}</p>
+      <p><strong>Allergies :</strong> ${form.allergies || '—'}</p>
+      <p><strong>Grossesse/accouchement récent :</strong> ${form.pregnancy || '—'}</p>
+      <p><strong>Activité physique régulière :</strong> ${form.regularActivity || '—'}</p>
+      <p><strong>Massage professionnel auparavant :</strong> ${form.hadProfessionalMassage || '—'}</p>
+      <p><strong>Niveau de stress :</strong> ${form.stressLevel || '—'}</p>
+      <p><strong>Signature :</strong> ${form.signature || '—'}</p>
       <p style="color: #6b6b6b; font-size: 13px;">
         ${booking ? 'Le formulaire et la facture de la réservation liée sont joints à cet email.' : 'Le formulaire est joint à cet email.'}
       </p>

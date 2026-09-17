@@ -7,10 +7,31 @@ import { generateInvoicePdf } from '../invoice.js';
 
 const router = Router();
 
-// POST /api/corporate — submit a "Tarif Personnel" eligibility form for the logged-in user
+// POST /api/corporate — submit the mandatory intake form (personal + corporate +
+// massage objectives + health/wellbeing + consent) for the logged-in user
 // body: { ...formFields, bookingId?: string }
 router.post('/', requireAuth, async (req, res) => {
-  const { bookingId, firstName, lastName, birthDate, phone, organizationType, companyName, employeeCountRange, employeeCount } = req.body;
+  const {
+    bookingId,
+    firstName,
+    lastName,
+    birthDate,
+    phone,
+    organizationType,
+    companyName,
+    employeeCountRange,
+    employeeCount,
+    expectations,
+    areasToTreat,
+    medicalConditions,
+    medications,
+    allergies,
+    pregnancy,
+    regularActivity,
+    hadProfessionalMassage,
+    stressLevel,
+    signature,
+  } = req.body;
 
   if (!firstName || !lastName || !birthDate || !phone) {
     return res.status(400).json({ success: false, message: 'Champs obligatoires manquants.' });
@@ -37,6 +58,16 @@ router.post('/', requireAuth, async (req, res) => {
       companyName,
       employeeCountRange,
       employeeCount,
+      expectations,
+      areasToTreat,
+      medicalConditions,
+      medications,
+      allergies,
+      pregnancy,
+      regularActivity,
+      hadProfessionalMassage,
+      stressLevel,
+      signature,
     },
   });
 
@@ -66,7 +97,7 @@ router.post('/', requireAuth, async (req, res) => {
     }
 
     await sendNotificationEmail({
-      subject: `Nouveau formulaire Tarif Personnel — ${firstName} ${lastName}`,
+      subject: `Nouvelle fiche de renseignements — ${firstName} ${lastName}`,
       html: corporateFormEmailHtml({ user, form, booking }),
       pdfs,
     });

@@ -15,6 +15,17 @@ const initialForm = {
   companyName: '',
   employeeCountRange: '',
   employeeCount: '',
+  expectations: '',
+  areasToTreat: '',
+  medicalConditions: '',
+  medications: '',
+  allergies: '',
+  pregnancy: '',
+  regularActivity: '',
+  hadProfessionalMassage: '',
+  stressLevel: '',
+  agreed: false,
+  signature: '',
 };
 
 export default function CorporateForm() {
@@ -26,7 +37,7 @@ export default function CorporateForm() {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [error, setError] = useState('');
 
-  const set = (field: keyof typeof form) => (value: string) => setForm((f) => ({ ...f, [field]: value }));
+  const set = (field: keyof typeof form) => (value: string | boolean) => setForm((f) => ({ ...f, [field]: value }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -111,6 +122,11 @@ export default function CorporateForm() {
     ['11-50', t('corporate.options.range2')],
     ['51-250', t('corporate.options.range3')],
     ['250+', t('corporate.options.range4')],
+  ];
+
+  const yesNoOptions: [string, string][] = [
+    ['oui', t('corporate.options.yes')],
+    ['non', t('corporate.options.no')],
   ];
 
   return (
@@ -249,6 +265,141 @@ export default function CorporateForm() {
             </div>
           </section>
 
+          {/* OBJECTIFS DU MASSAGE */}
+          <section>
+            <div className="bg-charcoal text-cream text-sm tracking-widest uppercase py-2 px-4 inline-block mb-6 rounded-md">
+              {t('corporate.sections.massageGoals')}
+            </div>
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t('corporate.fields.expectations')}</label>
+                <input
+                  type="text"
+                  placeholder={t('corporate.fields.expectationsPlaceholder')}
+                  required
+                  value={form.expectations}
+                  onChange={(e) => set('expectations')(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold outline-none"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t('corporate.fields.areasToTreat')}</label>
+                <input
+                  type="text"
+                  placeholder={t('corporate.fields.areasToTreatPlaceholder')}
+                  value={form.areasToTreat}
+                  onChange={(e) => set('areasToTreat')(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold outline-none"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* SANTÉ & BIEN-ÊTRE */}
+          <section>
+            <div className="bg-charcoal text-cream text-sm tracking-widest uppercase py-2 px-4 inline-block mb-6 rounded-md">
+              {t('corporate.sections.healthStatus')}
+            </div>
+            <div className="space-y-6">
+              <RadioRow
+                label={t('corporate.fields.medicalConditions')}
+                name="medicalConditions"
+                value={form.medicalConditions}
+                onChange={set('medicalConditions')}
+                options={yesNoOptions}
+              />
+              <RadioRow
+                label={t('corporate.fields.medications')}
+                name="medications"
+                value={form.medications}
+                onChange={set('medications')}
+                options={yesNoOptions}
+              />
+              <RadioRow
+                label={t('corporate.fields.allergies')}
+                name="allergies"
+                value={form.allergies}
+                onChange={set('allergies')}
+                options={yesNoOptions}
+              />
+              <RadioRow
+                label={t('corporate.fields.pregnancy')}
+                name="pregnancy"
+                value={form.pregnancy}
+                onChange={set('pregnancy')}
+                options={yesNoOptions}
+              />
+            </div>
+          </section>
+
+          {/* HABITUDES & BIEN-ÊTRE */}
+          <section>
+            <div className="bg-charcoal text-cream text-sm tracking-widest uppercase py-2 px-4 inline-block mb-6 rounded-md">
+              {t('corporate.sections.habitsWellbeing')}
+            </div>
+            <div className="space-y-6">
+              <RadioRow
+                label={t('corporate.fields.regularActivity')}
+                name="regularActivity"
+                value={form.regularActivity}
+                onChange={set('regularActivity')}
+                options={yesNoOptions}
+              />
+              <RadioRow
+                label={t('corporate.fields.hadProfessionalMassage')}
+                name="hadProfessionalMassage"
+                value={form.hadProfessionalMassage}
+                onChange={set('hadProfessionalMassage')}
+                options={yesNoOptions}
+              />
+              <RadioRow
+                label={t('corporate.fields.stressLevel')}
+                name="stressLevel"
+                value={form.stressLevel}
+                onChange={set('stressLevel')}
+                options={[
+                  ['oui', t('corporate.options.yes')],
+                  ['par_periode', t('corporate.options.sometimes')],
+                  ['non', t('corporate.options.no')],
+                ]}
+              />
+            </div>
+          </section>
+
+          {/* CONSENTEMENT */}
+          <section className="bg-light p-6 rounded-2xl border border-gray-200">
+            <div className="bg-charcoal text-cream text-sm tracking-widest uppercase py-2 px-4 inline-block mb-6 rounded-md">
+              {t('corporate.sections.consent')}
+            </div>
+
+            <label className="flex items-start gap-4 cursor-pointer group mb-6">
+              <div className="mt-1">
+                <input
+                  type="checkbox"
+                  required
+                  checked={form.agreed}
+                  onChange={(e) => set('agreed')(e.target.checked)}
+                  className="w-5 h-5 text-gold accent-gold border-gray-300 rounded cursor-pointer"
+                />
+              </div>
+              <span className="text-sm text-gray-700 leading-relaxed group-hover:text-charcoal transition-colors">
+                {t('corporate.attestation')}
+              </span>
+            </label>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{t('corporate.fields.signature')}</label>
+              <input
+                type="text"
+                required
+                placeholder={t('corporate.fields.signaturePlaceholder')}
+                value={form.signature}
+                onChange={(e) => set('signature')(e.target.value)}
+                className="w-full sm:max-w-md px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold outline-none font-serif italic"
+              />
+            </div>
+          </section>
+
           {error && <p className="text-sm text-red-500">{error}</p>}
 
           <button
@@ -259,6 +410,42 @@ export default function CorporateForm() {
             {formState === 'submitting' ? t('corporate.sending') : t('corporate.submitCta')}
           </button>
         </motion.form>
+      </div>
+    </div>
+  );
+}
+
+function RadioRow({
+  label,
+  name,
+  value,
+  onChange,
+  options,
+}: {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (v: string) => void;
+  options: [string, string][];
+}) {
+  return (
+    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100">
+      <label className="text-sm font-medium text-gray-700 mb-3 sm:mb-0">{label}</label>
+      <div className="flex gap-4">
+        {options.map(([val, text]) => (
+          <label key={val} className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name={name}
+              value={val}
+              checked={value === val}
+              onChange={() => onChange(val)}
+              required
+              className="w-4 h-4 text-gold accent-gold"
+            />{' '}
+            <span className="text-sm">{text}</span>
+          </label>
+        ))}
       </div>
     </div>
   );

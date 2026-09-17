@@ -384,7 +384,7 @@
     },
     "success": {
       "title": "Formulaire Envoyé",
-      "text": "Merci d'avoir complété votre formulaire tarif personnel. Nous vérifierons votre éligibilité au tarif réservé aux personnels du secteur public & privé.",
+      "text": "Merci d'avoir complété votre fiche de renseignements. Ces informations nous permettront de personnaliser votre soin en toute sécurité et de vérifier votre éligibilité au tarif personnel.",
       "homeCta": "Retour à l'accueil"
     },
     "loginRequired": {
@@ -392,11 +392,15 @@
       "text": "Vous devez être connecté(e) pour remplir ce formulaire."
     },
     "signup": "S'inscrire",
-    "practitionerTitle": "Formulaire Tarif Personnel",
-    "intro": "Ce tarif est réservé aux personnels du secteur public & privé. Merci de compléter ce formulaire pour vérifier votre éligibilité.",
+    "practitionerTitle": "Fiche de Renseignements",
+    "intro": "Merci de compléter ce formulaire obligatoire avant votre séance : il nous permet de personnaliser votre soin et de vérifier votre éligibilité au tarif personnel réservé aux personnels du secteur public & privé.",
     "sections": {
       "personalInfo": "Informations Personnelles",
-      "companyInfo": "Informations Entreprise"
+      "companyInfo": "Informations Entreprise",
+      "massageGoals": "Objectifs du Massage",
+      "healthStatus": "État de Santé",
+      "habitsWellbeing": "Habitudes & Bien-Être",
+      "consent": "Consentement"
     },
     "fields": {
       "lastName": "Nom",
@@ -408,7 +412,20 @@
       "companyNamePlaceholder": "Ex: Mairie de Saint-Paul, Clinique...",
       "employeeCountRange": "Tranche d'effectifs",
       "employeeCount": "Nombre exact d'employés",
-      "employeeCountPlaceholder": "Ex: 42"
+      "employeeCountPlaceholder": "Ex: 42",
+      "expectations": "Qu'attendez-vous de cette séance ?",
+      "expectationsPlaceholder": "Ex: Relaxation, soulager des douleurs...",
+      "areasToTreat": "Zones spécifiques à traiter ou à éviter :",
+      "areasToTreatPlaceholder": "Ex: Insister sur le dos, éviter la tête...",
+      "medicalConditions": "Avez-vous des problèmes médicaux ?",
+      "medications": "Prenez-vous des médicaments actuellement ?",
+      "allergies": "Avez-vous des allergies ?",
+      "pregnancy": "Êtes-vous enceinte ou avez-vous récemment accouché ?",
+      "regularActivity": "Pratiquez-vous une activité physique régulière ?",
+      "hadProfessionalMassage": "Avez-vous déjà reçu un massage professionnel ?",
+      "stressLevel": "Ressentez-vous fréquemment du stress ou de l'anxiété ?",
+      "signature": "Signature (Entrez votre nom complet) :",
+      "signaturePlaceholder": "Signature électronique"
     },
     "options": {
       "publique": "Publique",
@@ -416,10 +433,14 @@
       "range1": "1–10",
       "range2": "11–50",
       "range3": "51–250",
-      "range4": "250+"
+      "range4": "250+",
+      "yes": "Oui",
+      "no": "Non",
+      "sometimes": "Par période"
     },
+    "attestation": "J'atteste que les informations fournies sont exactes et j'accepte le massage sous ma propre responsabilité. Je comprends que ce soin est un massage de bien-être et de relaxation, non thérapeutique et non médicalisé.",
     "sending": "Envoi en cours...",
-    "submitCta": "Envoyer mon formulaire"
+    "submitCta": "Envoyer ma fiche"
   },
   "certifications": {
     "pageTitle": "Certifications",
