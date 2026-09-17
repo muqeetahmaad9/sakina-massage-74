@@ -1,4 +1,7 @@
 {
+  "announcementBanner": {
+    "message": "Avail Employee benefit Wellness program at €55.00"
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -279,7 +282,7 @@
       "timeLabel": "Time",
       "payCta": "Pay for my booking",
       "consentCta": "Fill in my intake form (Required)",
-      "corporateCta": "Staff Rate",
+      "corporateCta": "Fill in the form (Required)",
       "whatsappMessage": "Hello, I just booked {{services}} for {{date}} at {{time}}.",
       "homeCta": "Back to home"
     }

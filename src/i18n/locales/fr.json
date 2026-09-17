@@ -1,4 +1,7 @@
 {
+  "announcementBanner": {
+    "message": "Profitez du programme bien-être avantages employés à 55,00 €"
+  },
   "nav": {
     "home": "Accueil",
     "services": "Prestations",
@@ -279,7 +282,7 @@
       "timeLabel": "Heure",
       "payCta": "Payer ma réservation",
       "consentCta": "Remplir ma fiche (Obligatoire)",
-      "corporateCta": "Tarif Personnel",
+      "corporateCta": "Remplir le formulaire (Obligatoire)",
       "whatsappMessage": "Bonjour, je viens de réserver {{services}} pour le {{date}} à {{time}}.",
       "homeCta": "Retour Accueil"
     }

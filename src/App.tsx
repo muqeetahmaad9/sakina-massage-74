@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import AnnouncementBanner, { BANNER_HEIGHT_PX } from './components/layout/AnnouncementBanner';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -22,7 +23,8 @@ function App() {
     <AuthProvider>
       <Router>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
+        <AnnouncementBanner />
+        <div className="flex flex-col min-h-screen" style={{ marginTop: BANNER_HEIGHT_PX }}>
           <Navbar />
           <main className="flex-grow">
             <Routes>

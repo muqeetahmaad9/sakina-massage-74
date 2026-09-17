@@ -14,6 +14,8 @@ interface Service {
   image: string;
   /** True for tall poster-style flyer images that should be shown whole (letterboxed), not cropped. */
   isFlyerImage?: boolean;
+  /** True for a landscape image forced into a portrait box — cropped (object-cover) instead of letterboxed. */
+  isPortraitCropped?: boolean;
   hasDetails?: boolean;
   hasBenefits?: boolean;
   hasNote?: boolean;
@@ -109,6 +111,7 @@ const categories: Category[] = [
         price: '55 €',
         personnelPrice: '55 €',
         image: '/images/flyers/bon-cadeau-flyer.jpg',
+        isPortraitCropped: true,
         hasDetails: true,
       },
     ],
@@ -161,13 +164,13 @@ export default function Services() {
                   >
                     <div
                       className={`md:w-80 shrink-0 overflow-hidden ${
-                        service.isFlyerImage ? 'aspect-[3/4] bg-[#f6f1e7]' : 'aspect-[4/3]'
+                        service.isFlyerImage || service.isPortraitCropped ? 'aspect-[3/4] bg-[#f6f1e7]' : 'aspect-[4/3]'
                       }`}
                     >
                       <img
                         src={service.image}
                         alt={service.name}
-                        className={`w-full h-full ${service.isFlyerImage ? 'object-contain' : 'object-cover'}`}
+                        className={`w-full h-full ${service.isPortraitCropped ? 'object-cover' : service.isFlyerImage ? 'object-contain' : 'object-cover'}`}
                       />
                     </div>
 
