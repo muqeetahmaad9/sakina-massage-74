@@ -9,13 +9,17 @@ interface OfferImage {
 }
 
 export default function Offers() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [selected, setSelected] = useState<OfferImage | null>(null);
 
   const offers: OfferImage[] = [
     {
-      src: i18n.language === 'fr' ? '/images/offers/chair-massage-fr.jpg' : '/images/offers/chair-massage-en.jpg',
-      alt: t('offers.items.chairMassage'),
+      src: '/images/offers/chair-massage-en.jpg',
+      alt: `${t('offers.items.chairMassage')} (EN)`,
+    },
+    {
+      src: '/images/offers/chair-massage-fr.jpg',
+      alt: `${t('offers.items.chairMassage')} (FR)`,
     },
     {
       src: '/images/offers/journee-bien-etre.jpg',
