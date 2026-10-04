@@ -14,15 +14,15 @@ router.post('/signup', async (req, res) => {
   const { name, email, phone, countryDial, password, birthDate } = req.body;
 
   if (!name || !email || !phone || !password) {
-    return res.status(400).json({ success: false, message: 'Champs requis manquants.' });
+    return res.status(400).json({ success: false, code: 'MISSING_FIELDS', message: 'Champs requis manquants.' });
   }
   if (password.length < 6) {
-    return res.status(400).json({ success: false, message: 'Le mot de passe doit contenir au moins 6 caractères.' });
+    return res.status(400).json({ success: false, code: 'PASSWORD_TOO_SHORT', message: 'Le mot de passe doit contenir au moins 6 caractères.' });
   }
 
   const existing = await prisma.user.findUnique({ where: { email } });
   if (existing) {
-    return res.status(409).json({ success: false, message: 'Un compte existe déjà avec cet email.' });
+    return res.status(409).json({ success: false, code: 'EMAIL_IN_USE', message: 'Un compte existe déjà avec cet email.' });
   }
 
   const passwordHash = await bcrypt.hash(password, 10);
@@ -51,17 +51,17 @@ router.post('/signup', async (req, res) => {
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    return res.status(400).json({ success: false, message: 'Email et mot de passe requis.' });
+    return res.status(400).json({ success: false, code: 'MISSING_CREDENTIALS', message: 'Email et mot de passe requis.' });
   }
 
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) {
-    return res.status(401).json({ success: false, message: 'Email ou mot de passe incorrect.' });
+    return res.status(401).json({ success: false, code: 'INVALID_CREDENTIALS', message: 'Email ou mot de passe incorrect.' });
   }
 
   const valid = await bcrypt.compare(password, user.passwordHash);
   if (!valid) {
-    return res.status(401).json({ success: false, message: 'Email ou mot de passe incorrect.' });
+    return res.status(401).json({ success: false, code: 'INVALID_CREDENTIALS', message: 'Email ou mot de passe incorrect.' });
   }
 
   const token = signToken(user.id);
@@ -86,7 +86,7 @@ router.post('/logout', (req, res) => {
 router.post('/forgot-password', async (req, res) => {
   const { email } = req.body;
   if (!email) {
-    return res.status(400).json({ success: false, message: 'Email requis.' });
+    return res.status(400).json({ success: false, code: 'EMAIL_REQUIRED', message: 'Email requis.' });
   }
 
   const user = await prisma.user.findUnique({ where: { email } });
@@ -130,16 +130,16 @@ router.post('/reset-password', async (req, res) => {
   const { token, password } = req.body;
 
   if (!token || !password) {
-    return res.status(400).json({ success: false, message: 'Jeton et nouveau mot de passe requis.' });
+    return res.status(400).json({ success: false, code: 'MISSING_RESET_FIELDS', message: 'Jeton et nouveau mot de passe requis.' });
   }
   if (password.length < 6) {
-    return res.status(400).json({ success: false, message: 'Le mot de passe doit contenir au moins 6 caractères.' });
+    return res.status(400).json({ success: false, code: 'PASSWORD_TOO_SHORT', message: 'Le mot de passe doit contenir au moins 6 caractères.' });
   }
 
   const user = await prisma.user.findUnique({ where: { resetToken: token } });
 
   if (!user || !user.resetTokenExpiry || user.resetTokenExpiry < new Date()) {
-    return res.status(400).json({ success: false, message: 'Ce lien de réinitialisation est invalide ou a expiré.' });
+    return res.status(400).json({ success: false, code: 'RESET_LINK_INVALID', message: 'Ce lien de réinitialisation est invalide ou a expiré.' });
   }
 
   const passwordHash = await bcrypt.hash(password, 10);

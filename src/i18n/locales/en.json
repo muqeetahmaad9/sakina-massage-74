@@ -2,6 +2,16 @@
   "announcementBanner": {
     "message": "Avail Employee benefit Wellness program at €55.00"
   },
+  "authErrors": {
+    "MISSING_FIELDS": "Please fill in all required fields.",
+    "PASSWORD_TOO_SHORT": "Password must be at least 6 characters.",
+    "EMAIL_IN_USE": "An account already exists with this email.",
+    "MISSING_CREDENTIALS": "Email and password are required.",
+    "INVALID_CREDENTIALS": "Incorrect email or password.",
+    "EMAIL_REQUIRED": "Email is required.",
+    "MISSING_RESET_FIELDS": "Reset token and new password are required.",
+    "RESET_LINK_INVALID": "This reset link is invalid or has expired."
+  },
   "nav": {
     "home": "Home",
     "services": "Services",

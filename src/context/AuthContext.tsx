@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import { API_BASE } from '../config';
+import { translateAuthError } from '../utils/authErrors';
 
 export interface User {
   id: string;
@@ -64,7 +65,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setUser(data.user);
         return { success: true };
       }
-      return { success: false, message: data.message || 'Échec de la connexion.' };
+      return { success: false, message: translateAuthError(data.code, data.message || 'Échec de la connexion.') };
     } catch {
       return { success: false, message: 'Impossible de contacter le serveur.' };
     }
@@ -83,7 +84,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setUser(data.user);
         return { success: true };
       }
-      return { success: false, message: data.message || "Échec de l'inscription." };
+      return { success: false, message: translateAuthError(data.code, data.message || "Échec de l'inscription.") };
     } catch {
       return { success: false, message: 'Impossible de contacter le serveur.' };
     }

@@ -2,6 +2,16 @@
   "announcementBanner": {
     "message": "Profitez du programme bien-être avantages employés à 55,00 €"
   },
+  "authErrors": {
+    "MISSING_FIELDS": "Veuillez remplir tous les champs obligatoires.",
+    "PASSWORD_TOO_SHORT": "Le mot de passe doit contenir au moins 6 caractères.",
+    "EMAIL_IN_USE": "Un compte existe déjà avec cet email.",
+    "MISSING_CREDENTIALS": "Email et mot de passe requis.",
+    "INVALID_CREDENTIALS": "Email ou mot de passe incorrect.",
+    "EMAIL_REQUIRED": "Email requis.",
+    "MISSING_RESET_FIELDS": "Jeton et nouveau mot de passe requis.",
+    "RESET_LINK_INVALID": "Ce lien de réinitialisation est invalide ou a expiré."
+  },
   "nav": {
     "home": "Accueil",
     "services": "Prestations",

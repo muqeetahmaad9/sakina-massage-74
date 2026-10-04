@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { API_BASE } from '../config';
+import { translateAuthError } from '../utils/authErrors';
 
 export default function ForgotPassword() {
   const { t } = useTranslation();
@@ -28,7 +29,7 @@ export default function ForgotPassword() {
       if (res.ok && data.success) {
         setSent(true);
       } else {
-        setError(data.message || t('forgotPassword.errors.generic'));
+        setError(translateAuthError(data.code, data.message || t('forgotPassword.errors.generic')));
       }
     } catch {
       setError(t('forgotPassword.errors.server'));

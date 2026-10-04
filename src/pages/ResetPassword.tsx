@@ -4,6 +4,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Lock, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { API_BASE } from '../config';
+import { translateAuthError } from '../utils/authErrors';
 
 export default function ResetPassword() {
   const { t } = useTranslation();
@@ -60,7 +61,7 @@ export default function ResetPassword() {
         setSuccess(true);
         setTimeout(() => navigate('/login'), 2000);
       } else {
-        setError(data.message || t('resetPassword.errors.generic'));
+        setError(translateAuthError(data.code, data.message || t('resetPassword.errors.generic')));
       }
     } catch {
       setError(t('resetPassword.errors.server'));
