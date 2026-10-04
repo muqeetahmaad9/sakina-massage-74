@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LocationMap from '../ui/LocationMap';
+import { BOOKING_URL } from '../../config';
 
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
@@ -49,7 +50,7 @@ export default function Footer() {
                 <Link to="/" className="hover:text-gold transition-colors">{t('nav.home')}</Link>
               </li>
               <li>
-                <Link to="/book" className="hover:text-gold transition-colors">{t('nav.book')}</Link>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">{t('nav.book')}</a>
               </li>
               <li>
                 <Link to="/consent" className="hover:text-gold transition-colors">{t('footer.consentForm')}</Link>

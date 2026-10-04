@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { BOOKING_URL } from '../config';
 
 const reviewKeys = ['review1', 'review2', 'review3', 'review4', 'review5', 'review6'];
 
@@ -66,12 +67,14 @@ export default function Home() {
               {t('home.hero.title.line1')} <br className="hidden md:block" />{t('home.hero.title.line2')}
             </h1>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
-              <Link
-                to="/book"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-cream text-charcoal px-8 py-4 text-sm tracking-widest uppercase hover:bg-gold hover:text-cream transition-all duration-300 w-full sm:w-auto text-center"
               >
                 {t('home.hero.bookCta')}
-              </Link>
+              </a>
               <a
                 href="#services"
                 className="text-cream px-8 py-4 text-sm tracking-widest uppercase border border-cream/30 hover:bg-cream/10 transition-all duration-300 w-full sm:w-auto text-center"
@@ -183,9 +186,9 @@ export default function Home() {
                   <p className="text-sm text-gray-500 mb-6 font-light line-clamp-2">{t(`home.services.items.${service.key}.desc`)}</p>
                   <div className="flex items-center justify-between mt-auto">
                     <span className="text-sm font-medium text-olive">{service.price}</span>
-                    <Link to="/book" className="text-xs tracking-widest uppercase font-semibold text-charcoal hover:text-gold transition-colors">
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase font-semibold text-charcoal hover:text-gold transition-colors">
                       {t('home.services.bookLink')}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -222,9 +225,9 @@ export default function Home() {
           <p className="text-lg text-cream/80 font-light mb-12 max-w-2xl mx-auto">
             {t('home.video.text')}
           </p>
-          <Link to="/book" className="inline-block bg-gold text-charcoal px-10 py-4 text-sm tracking-widest uppercase hover:bg-cream transition-all duration-300 font-medium">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-gold text-charcoal px-10 py-4 text-sm tracking-widest uppercase hover:bg-cream transition-all duration-300 font-medium">
             {t('home.video.cta')}
-          </Link>
+          </a>
         </div>
       </section>
 

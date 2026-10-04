@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Clock, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { BOOKING_URL } from '../config';
 
 interface Service {
   key: string;
@@ -210,12 +210,14 @@ export default function Services() {
                         <p className="text-sm text-gray-500 italic font-light mb-6">{t(`${base}.note`)}</p>
                       )}
 
-                      <Link
-                        to="/book"
+                      <a
+                        href={BOOKING_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center justify-center bg-charcoal text-cream px-8 py-3 text-sm tracking-widest uppercase hover:bg-gold transition-all duration-300"
                       >
                         {t('services.bookCta')}
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 );

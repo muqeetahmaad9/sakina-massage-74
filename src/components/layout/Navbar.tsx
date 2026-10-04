@@ -4,6 +4,7 @@ import { Menu, X, User, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
+import { BOOKING_URL } from '../../config';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,12 +112,14 @@ export default function Navbar() {
               </Link>
             )}
 
-            <Link
-              to="/book"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-charcoal text-cream px-6 py-2.5 text-sm tracking-widest uppercase hover:bg-gold transition-colors duration-300"
             >
               {t('nav.book')}
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -195,12 +198,14 @@ export default function Navbar() {
               {t('nav.consentForm')}
             </Link>
 
-            <Link
-              to="/book"
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-charcoal text-cream px-8 py-3 text-sm tracking-widest uppercase hover:bg-gold transition-colors duration-300 mt-4"
             >
               {t('nav.book')}
-            </Link>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
