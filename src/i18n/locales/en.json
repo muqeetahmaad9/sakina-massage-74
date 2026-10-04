@@ -15,6 +15,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "offers": "Offers",
     "shop": "Shop",
     "gallery": "Gallery",
     "certifications": "Certifications",
@@ -452,6 +453,11 @@
     "attestation": "I confirm that the information provided is accurate and I accept the massage under my own responsibility. I understand that this treatment is a wellness and relaxation massage, not therapeutic and not medical.",
     "sending": "Sending...",
     "submitCta": "Submit my form"
+  },
+  "offers": {
+    "pageTitle": "Our Offers",
+    "pageSubtitle": "Discover our current offers and promotions.",
+    "empty": "No offers at the moment. Check back soon!"
   },
   "certifications": {
     "pageTitle": "Certifications",

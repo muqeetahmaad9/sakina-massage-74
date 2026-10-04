@@ -15,6 +15,7 @@
   "nav": {
     "home": "Accueil",
     "services": "Prestations",
+    "offers": "Offres",
     "shop": "Boutique",
     "gallery": "Galerie",
     "certifications": "Certifications",
@@ -452,6 +453,11 @@
     "attestation": "J'atteste que les informations fournies sont exactes et j'accepte le massage sous ma propre responsabilité. Je comprends que ce soin est un massage de bien-être et de relaxation, non thérapeutique et non médicalisé.",
     "sending": "Envoi en cours...",
     "submitCta": "Envoyer ma fiche"
+  },
+  "offers": {
+    "pageTitle": "Nos Offres",
+    "pageSubtitle": "Découvrez nos offres et promotions en cours.",
+    "empty": "Aucune offre en cours pour le moment. Revenez bientôt !"
   },
   "certifications": {
     "pageTitle": "Certifications",
