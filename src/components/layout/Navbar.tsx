@@ -56,7 +56,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+          <div className="hidden xl:flex items-center gap-4 2xl:gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -82,6 +82,13 @@ export default function Navbar() {
                 EN
               </button>
             </div>
+
+            <Link
+              to="/reservation-entreprise"
+              className="text-xs lg:text-sm tracking-widest text-charcoal hover:text-gold transition-colors uppercase whitespace-nowrap"
+            >
+              {t('nav.consentForm')}
+            </Link>
 
             {user ? (
               <div className="flex items-center gap-2">
@@ -113,7 +120,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden z-50 flex items-center gap-4">
+          <div className="xl:hidden z-50 flex items-center gap-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-charcoal p-2 focus:outline-none"
@@ -180,6 +187,13 @@ export default function Navbar() {
                 {t('nav.login')}
               </Link>
             )}
+
+            <Link
+              to="/reservation-entreprise"
+              className="text-sm font-medium tracking-widest text-charcoal hover:text-gold transition-colors uppercase"
+            >
+              {t('nav.consentForm')}
+            </Link>
 
             <Link
               to="/book"
