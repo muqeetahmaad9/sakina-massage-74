@@ -457,7 +457,11 @@
   "offers": {
     "pageTitle": "Nos Offres",
     "pageSubtitle": "Découvrez nos offres et promotions en cours.",
-    "empty": "Aucune offre en cours pour le moment. Revenez bientôt !"
+    "empty": "Aucune offre en cours pour le moment. Revenez bientôt !",
+    "items": {
+      "chairMassage": "Pourquoi le massage assis est l'allié de votre entreprise",
+      "journeeBienEtre": "Prestations proposées dans le cadre de la journée bien-être"
+    }
   },
   "certifications": {
     "pageTitle": "Certifications",

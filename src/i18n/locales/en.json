@@ -457,7 +457,11 @@
   "offers": {
     "pageTitle": "Our Offers",
     "pageSubtitle": "Discover our current offers and promotions.",
-    "empty": "No offers at the moment. Check back soon!"
+    "empty": "No offers at the moment. Check back soon!",
+    "items": {
+      "chairMassage": "Why is chair massage the ideal solution for your company",
+      "journeeBienEtre": "Services offered as part of the wellness day"
+    }
   },
   "certifications": {
     "pageTitle": "Certifications",

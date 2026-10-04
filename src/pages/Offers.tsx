@@ -8,12 +8,20 @@ interface OfferImage {
   alt: string;
 }
 
-// Add offer flyer images here as they're provided — each one gets its own grid card.
-const offers: OfferImage[] = [];
-
 export default function Offers() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selected, setSelected] = useState<OfferImage | null>(null);
+
+  const offers: OfferImage[] = [
+    {
+      src: i18n.language === 'fr' ? '/images/offers/chair-massage-fr.jpg' : '/images/offers/chair-massage-en.jpg',
+      alt: t('offers.items.chairMassage'),
+    },
+    {
+      src: '/images/offers/journee-bien-etre.jpg',
+      alt: t('offers.items.journeeBienEtre'),
+    },
+  ];
 
   return (
     <div className="min-h-screen pt-24 bg-cream pb-20">
