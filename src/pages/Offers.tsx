@@ -13,12 +13,13 @@ export default function Offers() {
   const { t } = useTranslation();
   const [selected, setSelected] = useState<OfferImage | null>(null);
 
+  const featuredOffer: OfferImage = {
+    src: '/images/offers/gift-voucher-headspa.jpg',
+    alt: t('offers.items.giftVoucherHeadSpa'),
+    badge: t('offers.items.giftVoucherHeadSpaBadge'),
+  };
+
   const offers: OfferImage[] = [
-    {
-      src: '/images/offers/gift-voucher-headspa.jpg',
-      alt: t('offers.items.giftVoucherHeadSpa'),
-      badge: t('offers.items.giftVoucherHeadSpaBadge'),
-    },
     {
       src: '/images/offers/chair-massage-en.jpg',
       alt: `${t('offers.items.chairMassage')} (EN)`,
@@ -47,9 +48,36 @@ export default function Offers() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {offers.length === 0 ? (
-          <p className="text-center text-gray-400 font-light py-20">{t('offers.empty')}</p>
-        ) : (
+        {/* Featured gift-voucher offer: image + promotional text side by side */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col md:flex-row mb-16"
+        >
+          <button
+            onClick={() => setSelected(featuredOffer)}
+            className="group relative md:w-96 shrink-0 aspect-[3/4] overflow-hidden bg-[#f6f1e7]"
+          >
+            <img
+              src={featuredOffer.src}
+              alt={featuredOffer.alt}
+              className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            {featuredOffer.badge && (
+              <span className="absolute top-3 left-3 bg-gold text-charcoal text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-md">
+                {featuredOffer.badge}
+              </span>
+            )}
+          </button>
+          <div className="p-6 md:p-10 flex-1 whitespace-pre-line text-gray-700 font-light leading-relaxed">
+            {t('offers.items.giftVoucherHeadSpaDescription')}
+          </div>
+        </motion.div>
+
+        {offers.length === 0 ? null : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {offers.map((offer, i) => (
               <motion.button
