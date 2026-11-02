@@ -28,18 +28,34 @@ export interface SignupData {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+const TOKEN_KEY = 'sakina_auth_token';
+
+// Primary auth mechanism: a token saved in localStorage and sent via the Authorization header.
+// Cookies (credentials: 'include') are also sent as a fallback for local dev, but are not relied
+// on in production because mobile Safari and many privacy browsers block cross-site cookies —
+// the frontend (Vercel) and backend (Render) are on different domains, which silently broke
+// login persistence for a meaningful share of real users.
+export function getAuthHeaders(): HeadersInit {
+  const token = localStorage.getItem(TOKEN_KEY);
+  return token ? { Authorization: `Bearer ${token}` } : {};
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   const refreshMe = async () => {
     try {
-      const res = await fetch(`${API_BASE}/auth/me`, { credentials: 'include' });
+      const res = await fetch(`${API_BASE}/auth/me`, {
+        credentials: 'include',
+        headers: getAuthHeaders(),
+      });
       if (res.ok) {
         const data = await res.json();
         setUser(data.user);
       } else {
         setUser(null);
+        localStorage.removeItem(TOKEN_KEY);
       }
     } catch {
       setUser(null);
@@ -62,6 +78,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        if (data.token) localStorage.setItem(TOKEN_KEY, data.token);
         setUser(data.user);
         return { success: true };
       }
@@ -81,6 +98,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        if (data.token) localStorage.setItem(TOKEN_KEY, data.token);
         setUser(data.user);
         return { success: true };
       }
@@ -92,8 +110,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = async () => {
     try {
-      await fetch(`${API_BASE}/auth/logout`, { method: 'POST', credentials: 'include' });
+      await fetch(`${API_BASE}/auth/logout`, {
+        method: 'POST',
+        credentials: 'include',
+        headers: getAuthHeaders(),
+      });
     } finally {
+      localStorage.removeItem(TOKEN_KEY);
       setUser(null);
     }
   };

@@ -28,9 +28,21 @@ export function clearSessionCookie(res) {
   res.clearCookie(COOKIE_NAME);
 }
 
-// Middleware: attaches req.userId if a valid session cookie is present, else 401.
+// Reads the session token from either the cookie or an `Authorization: Bearer <token>` header.
+// The header path exists because mobile Safari and many privacy-focused browsers block
+// cross-site cookies (the frontend on Vercel and backend on Render are different domains),
+// which silently breaks cookie-only auth for a meaningful share of visitors. The frontend
+// stores the token in localStorage and sends it as a Bearer header as the primary mechanism,
+// falling back to the cookie where it still works (e.g. local dev).
+function extractToken(req) {
+  const authHeader = req.headers.authorization;
+  if (authHeader?.startsWith('Bearer ')) return authHeader.slice(7);
+  return req.cookies?.[COOKIE_NAME];
+}
+
+// Middleware: attaches req.userId if a valid session token is present, else 401.
 export function requireAuth(req, res, next) {
-  const token = req.cookies?.[COOKIE_NAME];
+  const token = extractToken(req);
   if (!token) return res.status(401).json({ success: false, message: 'Non authentifié' });
 
   try {
@@ -44,7 +56,7 @@ export function requireAuth(req, res, next) {
 
 // Like requireAuth but doesn't fail if there's no session — just leaves req.userId undefined.
 export function optionalAuth(req, _res, next) {
-  const token = req.cookies?.[COOKIE_NAME];
+  const token = extractToken(req);
   if (token) {
     try {
       const payload = jwt.verify(token, JWT_SECRET);

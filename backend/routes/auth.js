@@ -43,6 +43,7 @@ router.post('/signup', async (req, res) => {
 
   res.status(201).json({
     success: true,
+    token,
     user: { id: user.id, name: user.name, email: user.email, phone: user.phone },
   });
 });
@@ -69,6 +70,7 @@ router.post('/login', async (req, res) => {
 
   res.json({
     success: true,
+    token,
     user: { id: user.id, name: user.name, email: user.email, phone: user.phone },
   });
 });

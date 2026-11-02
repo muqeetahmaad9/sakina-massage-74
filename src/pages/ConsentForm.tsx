@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
 import { CheckCircle2, LogIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../context/AuthContext';
+import { useAuth, getAuthHeaders } from '../context/AuthContext';
 import { API_BASE } from '../config';
+import { translateAuthError } from '../utils/authErrors';
 
 const initialForm = {
   firstName: '',
@@ -43,7 +44,7 @@ export default function ConsentForm() {
     try {
       const res = await fetch(`${API_BASE}/consent`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
         credentials: 'include',
         body: JSON.stringify({ ...form, bookingId }),
       });
@@ -53,7 +54,7 @@ export default function ConsentForm() {
         setFormState('success');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        setError(data.message || t('consent.errors.generic'));
+        setError(translateAuthError(data.code, data.message || t('consent.errors.generic')));
         setFormState('idle');
       }
     } catch {
