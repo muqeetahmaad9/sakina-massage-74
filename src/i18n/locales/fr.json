@@ -459,6 +459,8 @@
     "pageSubtitle": "Découvrez nos offres et promotions en cours.",
     "empty": "Aucune offre en cours pour le moment. Revenez bientôt !",
     "items": {
+      "giftVoucherHeadSpa": "Bon Cadeau Head Spa — Offrez un moment de bien-être pour les fêtes, 60 min, 50 €, validité 3 mois. Offre limitée, fin des ventes le 15 décembre 2026.",
+      "giftVoucherHeadSpaBadge": "Offre limitée — jusqu'au 15 déc.",
       "chairMassage": "Pourquoi le massage assis est l'allié de votre entreprise",
       "journeeBienEtre": "Prestations proposées dans le cadre de la journée bien-être"
     }

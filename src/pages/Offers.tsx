@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 interface OfferImage {
   src: string;
   alt: string;
+  badge?: string;
 }
 
 export default function Offers() {
@@ -13,6 +14,11 @@ export default function Offers() {
   const [selected, setSelected] = useState<OfferImage | null>(null);
 
   const offers: OfferImage[] = [
+    {
+      src: '/images/offers/gift-voucher-headspa.jpg',
+      alt: t('offers.items.giftVoucherHeadSpa'),
+      badge: t('offers.items.giftVoucherHeadSpaBadge'),
+    },
     {
       src: '/images/offers/chair-massage-en.jpg',
       alt: `${t('offers.items.chairMassage')} (EN)`,
@@ -62,6 +68,11 @@ export default function Offers() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-300" />
+                {offer.badge && (
+                  <span className="absolute top-3 left-3 bg-gold text-charcoal text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full shadow-md">
+                    {offer.badge}
+                  </span>
+                )}
               </motion.button>
             ))}
           </div>

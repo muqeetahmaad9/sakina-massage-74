@@ -459,6 +459,8 @@
     "pageSubtitle": "Discover our current offers and promotions.",
     "empty": "No offers at the moment. Check back soon!",
     "items": {
+      "giftVoucherHeadSpa": "Head Spa Gift Voucher — Give a moment of wellness for the holidays, 60 min, €50, valid 3 months. Limited offer, sales end December 15, 2026.",
+      "giftVoucherHeadSpaBadge": "Limited offer — until Dec 15",
       "chairMassage": "Why is chair massage the ideal solution for your company",
       "journeeBienEtre": "Services offered as part of the wellness day"
     }
