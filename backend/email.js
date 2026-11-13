@@ -1,7 +1,11 @@
 import { Resend } from 'resend';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'muhammadnauman41@gmail.com';
+// NOTIFY_EMAIL accepts a comma-separated list, e.g. "owner@gmail.com,second@gmail.com"
+const NOTIFY_EMAILS = (process.env.NOTIFY_EMAIL || 'muhammadnauman41@gmail.com')
+  .split(',')
+  .map((e) => e.trim())
+  .filter(Boolean);
 // Resend's sandbox sender — works without domain verification for testing.
 // Swap to a verified custom domain sender (e.g. reservations@sakinamassage974.fr) once one is set up in Resend.
 const FROM_EMAIL = process.env.FROM_EMAIL || 'Sakina Massage 974 <onboarding@resend.dev>';
@@ -35,7 +39,7 @@ export async function sendNotificationEmail({ subject, html, pdfBuffer, pdfFilen
 
     const result = await resend.emails.send({
       from: FROM_EMAIL,
-      to: NOTIFY_EMAIL,
+      to: NOTIFY_EMAILS,
       subject,
       html,
       attachments,
@@ -45,7 +49,7 @@ export async function sendNotificationEmail({ subject, html, pdfBuffer, pdfFilen
       console.error('[email] Resend error:', result.error);
       return { skipped: false, error: result.error };
     }
-    console.log('[email] Sent:', subject, '->', NOTIFY_EMAIL);
+    console.log('[email] Sent:', subject, '->', NOTIFY_EMAILS.join(', '));
     return { skipped: false, id: result.data?.id };
   } catch (err) {
     console.error('[email] Failed to send:', err);
