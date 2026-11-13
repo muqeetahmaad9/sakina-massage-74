@@ -20,18 +20,23 @@ export default function Offers() {
   };
 
   const offers: OfferImage[] = [
-    {
-      src: '/images/offers/chair-massage-en.jpg',
-      alt: `${t('offers.items.chairMassage')} (EN)`,
-    },
-    {
-      src: '/images/offers/chair-massage-fr.jpg',
-      alt: `${t('offers.items.chairMassage')} (FR)`,
-    },
-    {
-      src: '/images/offers/journee-bien-etre.jpg',
-      alt: t('offers.items.journeeBienEtre'),
-    },
+    { src: '/images/offers/seniors-massage-relaxant.jpg', alt: t('offers.items.seniorsMassageRelaxant') },
+    { src: '/images/offers/combo-headspa-pochons.jpg', alt: t('offers.items.comboHeadspaPochons') },
+    { src: '/images/offers/rituel-acupression-faciale.jpg', alt: t('offers.items.rituelAcupressionFaciale') },
+    { src: '/images/offers/bon-cadeau-enfant.jpg', alt: t('offers.items.bonCadeauEnfant') },
+    { src: '/images/offers/drainage-lymphatique-jambes.jpg', alt: t('offers.items.drainageLymphatiqueJambes') },
+    { src: '/images/offers/massage-cranien.jpg', alt: t('offers.items.massageCranien') },
+    { src: '/images/offers/foot-spa.jpg', alt: t('offers.items.footSpa') },
+    { src: '/images/offers/head-spa.jpg', alt: t('offers.items.headSpa') },
+    { src: '/images/offers/cure-anti-douleur.jpg', alt: t('offers.items.cureAntiDouleur') },
+    { src: '/images/offers/massage-abhyanga.jpg', alt: t('offers.items.massageAbhyangaOffer') },
+    { src: '/images/offers/massage-anti-stress.jpg', alt: t('offers.items.massageAntiStress') },
+    { src: '/images/offers/pack-bien-etre.jpg', alt: t('offers.items.packBienEtreOffer') },
+    { src: '/images/offers/deep-tissue-cupping.jpg', alt: t('offers.items.deepTissueCupping') },
+    { src: '/images/offers/massage-intuitif.jpg', alt: t('offers.items.massageIntuitif') },
+    { src: '/images/offers/body-touch-oriental.jpg', alt: t('offers.items.bodyTouchOriental') },
+    { src: '/images/offers/pochons-herbes.jpg', alt: t('offers.items.pochonsHerbes') },
+    { src: '/images/offers/bon-cadeau-fetes.jpg', alt: t('offers.items.bonCadeauFetes') },
   ];
 
   return (
